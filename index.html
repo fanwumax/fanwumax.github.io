@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,93 +13,288 @@
             margin: 40px;
             background-color: #f4f4f9;
         }
-        h1, h2, h3 {
+
+        h1,
+        h2,
+        h3 {
             color: #333;
         }
+
         .container {
-            max-width: 900px;
+            max-width: 1024px;
             margin: 0 auto;
         }
+
         .info {
             background-color: #fff;
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
             margin-bottom: 20px;
-            text-align: center;
+            font-size: 16px;
+            line-height: 1.6;
         }
+
         .info p {
             margin: 10px 0;
         }
+
         .info a {
-            color: #333;
-            text-decoration: none;
-            margin: 0 15px;
-            font-size: 18px;
+            color: #0066cc;
+            /* 修改颜色为蓝色 */
+            text-decoration: underline;
+            /* 添加下划线 */
+            margin-right: 15px;
+            font-size: 16px;
         }
+
         .info a:hover {
             color: #ff6347;
         }
-        .news, .research, .publications {
+
+        .news,
+        .research,
+        .publications {
             background-color: #fff;
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
             margin-bottom: 20px;
+            font-size: 16px;
         }
-        .news p, .research ul, .publications ul {
+
+        .news p,
+        .research ul,
+        .publications ul {
             margin: 0 0 10px;
         }
+
         footer {
             text-align: center;
             padding: 20px;
             font-size: 14px;
             color: #666;
         }
+
+        /* 表格样式 */
+        table.publication-table {
+            width: 100%;
+            border-collapse: collapse;
+            border-spacing: 30px 0;
+            /* 增加列与列之间的水平间距 */
+        }
+
+        table.publication-table th,
+        table.publication-table td {
+            padding: 10px 0;
+        }
+
+        /* 设置第一列（Title）左对齐，其他列居中 */
+        table.publication-table th {
+            text-align: left;
+            font-size: 16px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        table.publication-table td {
+            vertical-align: top;
+        }
+
+        /* 标题字体 */
+        .publication-title {
+            font-size: 16px;
+            margin: 0;
+        }
+
+        /* 作者和期刊字体 */
+        .publication-meta {
+            font-size: 12px;
+            color: gray;
+            margin: 0;
+        }
+
+        /* 设置Cited by和Year列的样式和间距 */
+        .cited-by,
+        .year {
+            text-align: center;
+            font-size: 16px;
+        }
     </style>
 </head>
+
 <body>
 
     <div class="container">
-        <h1>Fan Wu</h1>
-        <div class="info">
-            <p><strong>Lead AI Research and Engineer, Alibaba</strong></p>
-            <p>Ph.D., University of Chinese Academy of Sciences</p>
-            <p>Email: <a href="mailto:wufancia@gmail.com">wufancia@gmail.com</a></p>
-            <a href="https://scholar.google.com/citations?user=UsixouIAAAAJ&hl=en" target="_blank">Google Scholar</a>
-            <a href="https://github.com/fanwumax" target="_blank">GitHub</a>
-        </div>
-
+        <h1>Fan Wu (吴凡)</h1>
         <div class="info">
             <h3>About me</h3>
-            <p>I am an AI researcher with 7 years of experience in deep learning, specializing in large language models (LLMs), NLP, and reinforcement learning. At Alibaba, I led the development of a pre-trained Transformer model for Chinese address understanding, significantly improving logistics tasks like geocoding and ETA prediction. My research on spatio-temporal neural networks and reinforcement learning has optimized large-scale logistics systems. I have also led multimodal AI projects, including text-to-image, music, and video generation, with deep expertise in software development, LLM fine-tuning, prompt engineering, and advanced RAG techniques. I have successfully contributed to both cutting-edge research and real-world AI applications.</p>
-        </div>
-
-        <div class="news">
-            <h3>News</h3>
-            <p><strong>[2023-12-24]:</strong> OverleafCopilot now has over 2000+ daily users in Chrome Extension Store.</p>
-            <p><strong>[2023-11-24]:</strong> Created OverleafCopilot, a Chrome extension that integrates ChatGPT in Overleaf for paper polishing! <a href="#">(see video demo)</a></p>
-            <p><strong>[2023-6-2]:</strong> Launched PromptGenius with a friend. Explore amazing ChatGPT prompts for reading, writing, and more! <a href="https://www.promptgenius.site/" target="_blank">Visit PromptGenius</a></p>
+            <p><strong>Lead AI Research and Engineer, Alibaba</strong></p>
+            <p><strong>Ph.D., University of Chinese Academy of Sciences</strong></p>
+            <p>Email: <a href="mailto:wufancia@gmail.com">wufancia@gmail.com</a> |
+                <a href="https://scholar.google.com/citations?user=UsixouIAAAAJ&hl=en" target="_blank">Google
+                    Scholar</a> |
+                <a href="https://github.com/fanwumax" target="_blank">GitHub</a>
+            </p>
+            <p>I am an AI researcher with 7 years of experience in deep learning, specializing in large language models
+                (LLMs), NLP, and reinforcement learning. At Alibaba, my research on pre-trained Transformer model,
+                spatio-temporal neural networks and reinforcement learning has optimized large-scale logistics systems.
+                I have also led multimodal AI projects, including text-to-image, music, and video generation, with deep
+                expertise in software development, LLM fine-tuning, prompt engineering, and advanced RAG techniques.</p>
         </div>
 
         <div class="research">
             <h3>Research Interests</h3>
             <ul>
-                <li>Data Mining</li>
-                <li>Spatio-temporal Data Forecasting</li>
-                <li>Applied Machine Learning</li>
+                <li>Large Language Models</li>
+                <li>Spatio-temporal Data Mining</li>
+                <li>Spatio-temporal Neural Networks</li>
+                <li>reinforcement Learning for Decision Making</li>
             </ul>
         </div>
 
         <div class="publications">
             <h3>Publications</h3>
-            <ul>
-                <li><strong>A Survey on Service Route and Time Prediction in Instant Delivery: Taxonomy, Progress, and Prospects.</strong><br>
-                    Haomin Wen, Youfang Lin, Lixia Wu, et al. In IEEE Transactions on Knowledge and Data Engineering (TKDE), 2024</li>
-                <li><strong>Foundation Models for Time Series Analysis: A Tutorial and Survey.</strong><br>
-                    Yuxuan Liang, Haomin Wen, et al. In Proc. of ACM SIGKDD International Conference on Knowledge Discovery and Data Mining (KDD), 2024</li>
-            </ul>
+            <table class="publication-table">
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th class="cited-by">Cited by</th>
+                        <th class="year">Year</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <p class="publication-title">A spatial-temporal-semantic neural network algorithm for
+                                location prediction on moving objects</p>
+                            <p class="publication-meta">F Wu, K Fu, Y Wang, Z Xiao, X Fu</p>
+                            <p class="publication-meta">Algorithms 10 (2), 37</p>
+                        </td>
+                        <td class="cited-by">80</td>
+                        <td class="year">2017</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p class="publication-title">DeepETA: a spatial-temporal sequential neural network model for
+                                estimating time of arrival in package delivery system</p>
+                            <p class="publication-meta">F Wu, L Wu</p>
+                            <p class="publication-meta">Proceedings of the AAAI conference on artificial intelligence 33
+                                (01), 774-781</p>
+                        </td>
+                        <td class="cited-by">47</td>
+                        <td class="year">2019</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p class="publication-title">Package pick-up route prediction via modeling couriers’
+                                spatial-temporal behaviors</p>
+                            <p class="publication-meta">H Wen, Y Lin, F Wu, H Wan, S Guo, L Wu, C Song, Y Xu</p>
+                            <p class="publication-meta">2021 IEEE 37th International Conference on Data Engineering
+                                (ICDE), 2141-2146</p>
+                        </td>
+                        <td class="cited-by">32</td>
+                        <td class="year">2021</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p class="publication-title">Graph2route: A dynamic spatial-temporal graph neural network
+                                for pick-up and delivery route prediction</p>
+                            <p class="publication-meta">H Wen, Y Lin, X Mao, F Wu, Y Zhao, H Wang, J Zheng, L Wu, H Hu,
+                                ...</p>
+                            <p class="publication-meta">Proceedings of the 28th ACM SIGKDD conference on knowledge
+                                discovery and …</p>
+                        </td>
+                        <td class="cited-by">28</td>
+                        <td class="year">2022</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p class="publication-title">Deeproute+: Modeling couriers’ spatial-temporal behaviors and
+                                decision preferences for package pick-up route prediction</p>
+                            <p class="publication-meta">H Wen, Y Lin, H Wan, S Guo, F Wu, L Wu, C Song, Y Xu</p>
+                            <p class="publication-meta">ACM Transactions on Intelligent Systems and Technology (TIST) 13
+                                (2), 1-23</p>
+                        </td>
+                        <td class="cited-by">14</td>
+                        <td class="year">2022</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p class="publication-title">Enough waiting for the couriers: Learning to estimate package
+                                pick-up arrival time from couriers’ spatial-temporal behaviors</p>
+                            <p class="publication-meta">H Wen, Y Lin, F Wu, H Wan, Z Sun, T Cai, H Liu, S Guo, J Zheng,
+                                C Song, ...</p>
+                            <p class="publication-meta">ACM Transactions on Intelligent Systems and Technology 14 (3),
+                                1-22</p>
+                        </td>
+                        <td class="cited-by">9</td>
+                        <td class="year">2023</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p class="publication-title">A graph-based min-# and error-optimal trajectory simplification
+                                algorithm and its extension towards online services</p>
+                            <p class="publication-meta">F Wu, K Fu, Y Wang, Z Xiao</p>
+                            <p class="publication-meta">ISPRS International Journal of Geo-Information 6 (1), 19</p>
+                        </td>
+                        <td class="cited-by">6</td>
+                        <td class="year">2017</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p class="publication-title">Modeling intra-and inter-community information for route and
+                                time prediction in last-mile delivery</p>
+                            <p class="publication-meta">Y Qiang, H Wen, L Wu, X Mao, F Wu, H Wan, H Hu</p>
+                            <p class="publication-meta">2023 IEEE 39th International Conference on Data Engineering
+                                (ICDE), 3106-3112</p>
+                        </td>
+                        <td class="cited-by">5</td>
+                        <td class="year">2023</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p class="publication-title">GMDNet: A graph-based mixture density network for estimating
+                                packages’ multimodal travel time distribution</p>
+                            <p class="publication-meta">X Mao, H Wan, H Wen, F Wu, J Zheng, Y Qiang, S Guo, L Wu, H Hu,
+                                Y Lin</p>
+                            <p class="publication-meta">Proceedings of the AAAI Conference on Artificial Intelligence 37
+                                (4), 4561-4568</p>
+                        </td>
+                        <td class="cited-by">4</td>
+                        <td class="year">2023</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p class="publication-title">M2G4RTP: A Multi-Level and Multi-Task Graph Model for
+                                Instant-Logistics Route and Time Joint Prediction</p>
+                            <p class="publication-meta">T Cai, H Wan, F Wu, H Wen, S Guo, L Wu, H Hu, Y Lin</p>
+                            <p class="publication-meta">2023 IEEE 39th International Conference on Data Engineering
+                                (ICDE), 3296-3308</p>
+                        </td>
+                        <td class="cited-by">3</td>
+                        <td class="year">2023</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p class="publication-title">Learning a Contextual and Topological Representation of
+                                Areas-of-Interest for On-Demand Delivery Application</p>
+                            <p class="publication-meta">M Yue, T Sun, F Wu, L Wu, Y Xu, C Shahabi</p>
+                            <p class="publication-meta">Machine Learning and Knowledge Discovery in Databases: Applied
+                                Data Science …</p>
+                        </td>
+                        <td class="cited-by">1</td>
+                        <td class="year">2021</td>
+                    </tr>
+                    <!-- 显示论文总数 -->
+                    <tr>
+                        <td colspan="3" style="text-align: center; font-size: 14px; color: black;">
+                            Articles 1–11
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
+
     </div>
 
     <footer>
@@ -106,4 +302,5 @@
     </footer>
 
 </body>
+
 </html>
