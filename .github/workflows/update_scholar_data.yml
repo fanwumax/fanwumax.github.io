@@ -32,3 +32,5 @@ jobs:
           git add data/scholar_data.json
           git commit -m 'Update scholar data' || echo "No changes to commit"
           git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
