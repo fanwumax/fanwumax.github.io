@@ -1,120 +1,218 @@
 {
-    "last_updated": "2025-04-10T15:38:02.835464Z",
+    "last_updated": "2025-04-10T16:15:16.610550Z",
     "author": {
         "name": "Fan Wu",
         "affiliations": "Alibaba Cainiao Network",
         "email": "Verified email at cainiao.com",
         "cited_by": {
-            "total": null,
-            "h_index": null,
-            "i10_index": null
+            "citations": {
+                "all": 509,
+                "since_2019": 430
+            },
+            "h_index": {
+                "all": 9,
+                "since_2019": 9
+            },
+            "i10_index": {
+                "all": 8,
+                "since_2019": 8
+            }
         }
     },
-    "citation_graph": [],
+    "citation_graph": [
+        {
+            "year": 2017,
+            "citations": 7
+        },
+        {
+            "year": 2018,
+            "citations": 32
+        },
+        {
+            "year": 2019,
+            "citations": 39
+        },
+        {
+            "year": 2020,
+            "citations": 51
+        },
+        {
+            "year": 2021,
+            "citations": 44
+        },
+        {
+            "year": 2022,
+            "citations": 69
+        },
+        {
+            "year": 2023,
+            "citations": 89
+        },
+        {
+            "year": 2024,
+            "citations": 153
+        },
+        {
+            "year": 2025,
+            "citations": 24
+        }
+    ],
     "publications": [
         {
             "title": "Identifying different transportation modes from trajectory data using tree-based ensemble classifiers",
             "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=UsixouIAAAAJ&citation_for_view=UsixouIAAAAJ:WF5omc3nYNoC",
-            "year": "2017",
-            "citations": 216,
+            "citation_id": "UsixouIAAAAJ:WF5omc3nYNoC",
             "authors": "Z Xiao, Y Wang, K Fu, F Wu",
-            "publication": "ISPRS International Journal of Geo-Information 6 (2), 57, 2017"
+            "publication": "ISPRS International Journal of Geo-Information 6 (2), 57, 2017",
+            "cited_by": {
+                "value": 216,
+                "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=15332096482201017594"
+            },
+            "year": "2017"
         },
         {
             "title": "A spatial-temporal-semantic neural network algorithm for location prediction on moving objects",
             "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=UsixouIAAAAJ&citation_for_view=UsixouIAAAAJ:eQOLeE2rZwMC",
-            "year": "2017",
-            "citations": 80,
+            "citation_id": "UsixouIAAAAJ:eQOLeE2rZwMC",
             "authors": "F Wu, K Fu, Y Wang, Z Xiao, X Fu",
-            "publication": "Algorithms 10 (2), 37, 2017"
+            "publication": "Algorithms 10 (2), 37, 2017",
+            "cited_by": {
+                "value": 80,
+                "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=7182869669317380944"
+            },
+            "year": "2017"
         },
         {
             "title": "DeepETA: a spatial-temporal sequential neural network model for estimating time of arrival in package delivery system",
             "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=UsixouIAAAAJ&citation_for_view=UsixouIAAAAJ:9yKSN-GCB0IC",
-            "year": "2019",
-            "citations": 59,
+            "citation_id": "UsixouIAAAAJ:9yKSN-GCB0IC",
             "authors": "F Wu, L Wu",
-            "publication": "Proceedings of the AAAI conference on artificial intelligence 33 (01), 774-781, 2019"
+            "publication": "Proceedings of the AAAI conference on artificial intelligence 33 (01), 774-781, 2019",
+            "cited_by": {
+                "value": 59,
+                "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=10567519635662410710"
+            },
+            "year": "2019"
         },
         {
             "title": "Graph2route: A dynamic spatial-temporal graph neural network for pick-up and delivery route prediction",
             "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=UsixouIAAAAJ&citation_for_view=UsixouIAAAAJ:zYLM7Y9cAGgC",
-            "year": "2022",
-            "citations": 42,
+            "citation_id": "UsixouIAAAAJ:zYLM7Y9cAGgC",
             "authors": "H Wen, Y Lin, X Mao, F Wu, Y Zhao, H Wang, J Zheng, L Wu, H Hu, ...",
-            "publication": "Proceedings of the 28th ACM SIGKDD conference on knowledge discovery and …, 2022"
+            "publication": "Proceedings of the 28th ACM SIGKDD conference on knowledge discovery and …, 2022",
+            "cited_by": {
+                "value": 42,
+                "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=15762923462730632688"
+            },
+            "year": "2022"
         },
         {
             "title": "Package pick-up route prediction via modeling couriers’ spatial-temporal behaviors",
             "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=UsixouIAAAAJ&citation_for_view=UsixouIAAAAJ:d1gkVwhDpl0C",
-            "year": "2021",
-            "citations": 40,
+            "citation_id": "UsixouIAAAAJ:d1gkVwhDpl0C",
             "authors": "H Wen, Y Lin, F Wu, H Wan, S Guo, L Wu, C Song, Y Xu",
-            "publication": "2021 IEEE 37th International Conference on Data Engineering (ICDE), 2141-2146, 2021"
+            "publication": "2021 IEEE 37th International Conference on Data Engineering (ICDE), 2141-2146, 2021",
+            "cited_by": {
+                "value": 40,
+                "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=7480549552409953571"
+            },
+            "year": "2021"
         },
         {
             "title": "Deeproute+: Modeling couriers’ spatial-temporal behaviors and decision preferences for package pick-up route prediction",
             "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=UsixouIAAAAJ&citation_for_view=UsixouIAAAAJ:IjCSPb-OGe4C",
-            "year": "2022",
-            "citations": 20,
+            "citation_id": "UsixouIAAAAJ:IjCSPb-OGe4C",
             "authors": "H Wen, Y Lin, H Wan, S Guo, F Wu, L Wu, C Song, Y Xu",
-            "publication": "ACM Transactions on Intelligent Systems and Technology (TIST) 13 (2), 1-23, 2022"
+            "publication": "ACM Transactions on Intelligent Systems and Technology (TIST) 13 (2), 1-23, 2022",
+            "cited_by": {
+                "value": 20,
+                "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=11349664376475830398"
+            },
+            "year": "2022"
         },
         {
             "title": "Enough waiting for the couriers: Learning to estimate package pick-up arrival time from couriers’ spatial-temporal behaviors",
             "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=UsixouIAAAAJ&citation_for_view=UsixouIAAAAJ:UeHWp8X0CEIC",
-            "year": "2023",
-            "citations": 14,
+            "citation_id": "UsixouIAAAAJ:UeHWp8X0CEIC",
             "authors": "H Wen, Y Lin, F Wu, H Wan, Z Sun, T Cai, H Liu, S Guo, J Zheng, C Song, ...",
-            "publication": "ACM Transactions on Intelligent Systems and Technology 14 (3), 1-22, 2023"
+            "publication": "ACM Transactions on Intelligent Systems and Technology 14 (3), 1-22, 2023",
+            "cited_by": {
+                "value": 14,
+                "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=8916976141290721437"
+            },
+            "year": "2023"
         },
         {
             "title": "Modeling intra-and inter-community information for route and time prediction in last-mile delivery",
             "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=UsixouIAAAAJ&citation_for_view=UsixouIAAAAJ:Tyk-4Ss8FVUC",
-            "year": "2023",
-            "citations": 10,
+            "citation_id": "UsixouIAAAAJ:Tyk-4Ss8FVUC",
             "authors": "Y Qiang, H Wen, L Wu, X Mao, F Wu, H Wan, H Hu",
-            "publication": "2023 IEEE 39th International Conference on Data Engineering (ICDE), 3106-3112, 2023"
+            "publication": "2023 IEEE 39th International Conference on Data Engineering (ICDE), 3106-3112, 2023",
+            "cited_by": {
+                "value": 10,
+                "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=3392569264024721955"
+            },
+            "year": "2023"
         },
         {
             "title": "Gmdnet: A graph-based mixture density network for estimating packages’ multimodal travel time distribution",
             "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=UsixouIAAAAJ&citation_for_view=UsixouIAAAAJ:qjMakFHDy7sC",
-            "year": "2023",
-            "citations": 9,
+            "citation_id": "UsixouIAAAAJ:qjMakFHDy7sC",
             "authors": "X Mao, H Wan, H Wen, F Wu, J Zheng, Y Qiang, S Guo, L Wu, H Hu, Y Lin",
-            "publication": "Proceedings of the AAAI Conference on Artificial Intelligence 37 (4), 4561-4568, 2023"
+            "publication": "Proceedings of the AAAI Conference on Artificial Intelligence 37 (4), 4561-4568, 2023",
+            "cited_by": {
+                "value": 9,
+                "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=8085837359985723619"
+            },
+            "year": "2023"
         },
         {
             "title": "M2G4RTP: A Multi-Level and Multi-Task Graph Model for Instant-Logistics Route and Time Joint Prediction",
             "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=UsixouIAAAAJ&citation_for_view=UsixouIAAAAJ:W7OEmFMy1HYC",
-            "year": "2023",
-            "citations": 8,
+            "citation_id": "UsixouIAAAAJ:W7OEmFMy1HYC",
             "authors": "T Cai, H Wan, F Wu, H Wen, S Guo, L Wu, H Hu, Y Lin",
-            "publication": "2023 IEEE 39th International Conference on Data Engineering (ICDE), 3296-3308, 2023"
+            "publication": "2023 IEEE 39th International Conference on Data Engineering (ICDE), 3296-3308, 2023",
+            "cited_by": {
+                "value": 8,
+                "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=8894976767045999875"
+            },
+            "year": "2023"
         },
         {
             "title": "A graph-based min-# and error-optimal trajectory simplification algorithm and its extension towards online services",
             "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=UsixouIAAAAJ&citation_for_view=UsixouIAAAAJ:YsMSGLbcyi4C",
-            "year": "2017",
-            "citations": 6,
+            "citation_id": "UsixouIAAAAJ:YsMSGLbcyi4C",
             "authors": "F Wu, K Fu, Y Wang, Z Xiao",
-            "publication": "ISPRS International Journal of Geo-Information 6 (1), 19, 2017"
+            "publication": "ISPRS International Journal of Geo-Information 6 (1), 19, 2017",
+            "cited_by": {
+                "value": 6,
+                "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=330678045041077657"
+            },
+            "year": "2017"
         },
         {
             "title": "Modeling spatial–temporal constraints and spatial-transfer patterns for couriers’ package pick-up route prediction",
             "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=UsixouIAAAAJ&citation_for_view=UsixouIAAAAJ:ufrVoPGSRksC",
-            "year": "2023",
-            "citations": 4,
+            "citation_id": "UsixouIAAAAJ:ufrVoPGSRksC",
             "authors": "H Wen, Y Lin, Y Hu, F Wu, M Xia, X Zhang, L Wu, H Hu, H Wan",
-            "publication": "IEEE Transactions on Intelligent Transportation Systems 24 (12), 13787-13800, 2023"
+            "publication": "IEEE Transactions on Intelligent Transportation Systems 24 (12), 13787-13800, 2023",
+            "cited_by": {
+                "value": 4,
+                "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=18039432900574767716"
+            },
+            "year": "2023"
         },
         {
             "title": "Learning a Contextual and Topological Representation of Areas-of-Interest for On-Demand Delivery Application",
             "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=UsixouIAAAAJ&citation_for_view=UsixouIAAAAJ:2osOgNQ5qMEC",
-            "year": "2021",
-            "citations": 1,
+            "citation_id": "UsixouIAAAAJ:2osOgNQ5qMEC",
             "authors": "M Yue, T Sun, F Wu, L Wu, Y Xu, C Shahabi",
-            "publication": "Machine Learning and Knowledge Discovery in Databases: Applied Data Science …, 2021"
+            "publication": "Machine Learning and Knowledge Discovery in Databases: Applied Data Science …, 2021",
+            "cited_by": {
+                "value": 1,
+                "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=11943530446606611326"
+            },
+            "year": "2021"
         }
     ]
 }
