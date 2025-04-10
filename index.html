@@ -4,323 +4,206 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fan Wu</title>
+    <title>Fan Wu | AI Researcher & Engineer</title>
     <link rel="shortcut icon" href="favicon.ico" />
     <link rel="bookmark" href="favicon.ico" type="image/x-icon" />
+    <!-- TailwindCSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        serif: ['Times New Roman', 'serif'],
+                    },
+                    colors: {
+                        primary: '#3B82F6',
+                        secondary: '#10B981',
+                        dark: '#1F2937',
+                        light: '#F3F4F6',
+                    },
+                    maxWidth: {
+                        '8xl': '88rem',
+                    }
+                }
+            }
+        }
+    </script>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 40px;
-            background-color: #f4f4f9;
+        [data-lang="en"] .zh {
+            display: none;
         }
-
-        h1,
-        h2,
-        h3 {
-            color: #333;
+        [data-lang="zh"] .en {
+            display: none;
         }
-
-        .container {
-            max-width: 1024px;
-            margin: 0 auto;
-        }
-
-        .info {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
-            font-size: 16px;
-            line-height: 1.6;
-        }
-
-        .info p {
-            margin: 10px 0;
-        }
-
-        .info a {
-            color: #0066cc;
-            /* 修改颜色为蓝色 */
-            text-decoration: underline;
-            /* 添加下划线 */
-            margin-right: 15px;
-            font-size: 16px;
-        }
-
-        .info a:hover {
-            color: #ff6347;
-        }
-
-        .news,
-        .research,
-        .publications {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
-            font-size: 16px;
-        }
-
-        .news p,
-        .research ul,
-        .publications ul {
-            margin: 0 0 10px;
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px;
-            font-size: 14px;
-            color: #666;
-        }
-
-        /* 表格样式 */
-        table.publication-table {
-            width: 100%;
-            border-collapse: collapse;
-            border-spacing: 30px 0;
-            /* 增加列与列之间的水平间距 */
-        }
-
-        table.publication-table th,
-        table.publication-table td {
-            padding: 10px 0;
-        }
-
-        /* 设置第一列（Title）左对齐，其他列居中 */
-        table.publication-table th {
-            text-align: left;
-            font-size: 16px;
-            border-bottom: 1px solid #ccc;
-        }
-
-        table.publication-table td {
-            vertical-align: top;
-        }
-
-        /* 标题字体 */
-        .publication-title {
-            font-size: 16px;
-            margin: 0;
-        }
-
-        /* 作者和期刊字体 */
-        .publication-meta {
-            font-size: 12px;
-            color: gray;
-            margin: 0;
-        }
-
-        /* 设置Cited by和Year列的样式和间距 */
-        .cited-by,
-        .year {
-            text-align: center;
-            font-size: 16px;
-        }
+        body { font-family: 'Times New Roman', serif; }
     </style>
 </head>
 
-<body>
-
-    <div class="container">
-        <h1>Fan Wu (吴凡)</h1>
-        <div class="info">
-            <h3>About me</h3>
-            <p><strong>Lead AI Research and Engineer, Alibaba</strong></p>
-            <p><strong>Ph.D., University of Chinese Academy of Sciences</strong></p>
-            <p>Email: <a href="mailto:wufancia@gmail.com">wufancia@gmail.com</a> |
-                <a href="https://scholar.google.com/citations?user=UsixouIAAAAJ&hl=en" target="_blank">Google
-                    Scholar</a> 
-                <a href="https://www.webofscience.com/wos/author/record/LOR-0432-2024">Web of Science</a>
-                <a href="https://www.semanticscholar.org/author/Fan-Wu/2116491329" target="_blank">Semantic Scholar</a>
-                <a href="https://orcid.org/0000-0001-8869-186X" target="_blank">ORCID</a> |
-                <a href="https://github.com/fanwumax" target="_blank">GitHub</a>
-                
-            </p>
-            <p>I am an AI researcher with 7 years of experience in deep learning, specializing in large language models
-                (LLMs), NLP, and reinforcement learning. At Alibaba, my research on pre-trained Transformer model,
-                spatio-temporal neural networks and reinforcement learning has optimized large-scale logistics systems.
-                I have also led multimodal AI projects, including text-to-image, music, and video generation, with deep
-                expertise in software development, LLM fine-tuning, prompt engineering, and advanced RAG techniques.</p>
+<body class="bg-gray-50 font-serif">
+    <div class="container mx-auto px-2 py-6 max-w-6xl">
+        <!-- Header with Language Switch -->
+        <div class="flex justify-between items-center mb-6">
+            <div class="flex items-center space-x-6">
+                <img src="my_profile.jpg" alt="Fan Wu" class="w-24 h-24 rounded-full object-cover border-2 border-primary">
+                <h1 class="text-4xl font-bold text-gray-800">Fan Wu (吴凡)</h1>
+            </div>
+            <div class="flex space-x-2">
+                <button onclick="switchLanguage('en')" class="px-3 py-1 rounded-md bg-blue-100 text-blue-600 hover:bg-blue-200 transition">EN</button>
+                <button onclick="switchLanguage('zh')" class="px-3 py-1 rounded-md bg-blue-100 text-blue-600 hover:bg-blue-200 transition">中文</button>
+            </div>
         </div>
 
-        <div class="research">
-            <h3>Research Interests</h3>
-            <ul>
-                <li>Large Language Models</li>
-                <li>Spatio-temporal Data Mining</li>
-                <li>Spatio-temporal Neural Networks</li>
-                <li>reinforcement Learning for Decision Making</li>
-            </ul>
+        <!-- About Section -->
+        <div class="bg-white rounded-lg shadow-sm p-5 mb-6">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-3">About Me</h2>
+            <div class="prose max-w-none">
+                <p class="en text-gray-600 leading-relaxed">
+                    I am an AI researcher and software engineer with 7 years of experience in machine learning, deep learning, and large language models (LLMs). I hold a PhD from the University of Chinese Academy of Sciences. My expertise spans from AI model development to building large-scale enterprise AI platforms, with a focus on applying GenAI technologies to real-world business scenarios.
+                </p>
+                <p class="en text-gray-600 leading-relaxed mt-2">
+                    I have hands-on experience in end-to-end AI system development, including model research, infrastructure design, and productization. In recent years, I have led the design and implementation of an enterprise AI platform, integrating LLM-powered tools such as intelligent assistants, RAG-based solutions, and content generation systems.
+                </p>
+                <p class="en text-gray-600 leading-relaxed mt-2">
+                    My research background includes publishing papers at top conferences such as AAAI, ICDE, and KDD, covering topics like spatio-temporal data mining, sequence modeling, and reinforcement learning. I enjoy bridging AI research and product development, driving innovation from ideas to scalable solutions.
+                </p>
+                <p class="zh text-gray-600 leading-relaxed">
+                    我是一名资深的人工智能研究员和软件工程师，拥有7年AI与深度学习研发经验，博士毕业于中国科学院大学。我的研究和工作方向聚焦于大模型（LLM）相关技术的应用与落地，擅长从算法研究到企业级平台系统的端到端建设。
+                </p>
+                <p class="zh text-gray-600 leading-relaxed mt-2">
+                    我具备丰富的AI平台研发与工程实践经验，曾主导企业内部大模型平台的架构设计与开发，覆盖智能助手、RAG问答、内容生成等多种场景。
+                </p>
+                <p class="zh text-gray-600 leading-relaxed mt-2">
+                    此外，我长期从事AI相关研究，在AAAI、ICDE、KDD等国际顶级会议发表多篇论文，研究方向包括时空数据挖掘、序列建模与强化学习。我希望能够将AI技术与实际业务深度融合，推动创新型产品的落地与规模化应用。
+                </p>
+            </div>
         </div>
 
-        <div class="publications">
-            <h3>Publications</h3>
-            <table class="publication-table">
-                <thead>
-                    <tr>
-                        <th>Title</th>
-                        <th class="cited-by">Cited by</th>
-                        <th class="year">Year</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>
-                            <p class="publication-title">Identifying different transportation modes from trajectory data using tree-based ensemble classifiers</p>
-                            <p class="publication-meta">Z Xiao, Y Wang, K Fu, F Wu</p>
-                            <p class="publication-meta">ISPRS International Journal of Geo-Information 6 (2), 57</p>
-                        </td>
-                        <td class="cited-by">205</td>
-                        <td class="year">2017</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <p class="publication-title">A spatial-temporal-semantic neural network algorithm for
-                                location prediction on moving objects</p>
-                            <p class="publication-meta">F Wu, K Fu, Y Wang, Z Xiao, X Fu</p>
-                            <p class="publication-meta">Algorithms 10 (2), 37</p>
-                        </td>
-                        <td class="cited-by">80</td>
-                        <td class="year">2017</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <p class="publication-title">DeepETA: a spatial-temporal sequential neural network model for
-                                estimating time of arrival in package delivery system</p>
-                            <p class="publication-meta">F Wu, L Wu</p>
-                            <p class="publication-meta">Proceedings of the AAAI conference on artificial intelligence 33
-                                (01), 774-781</p>
-                        </td>
-                        <td class="cited-by">51</td>
-                        <td class="year">2019</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <p class="publication-title">Package pick-up route prediction via modeling couriers’
-                                spatial-temporal behaviors</p>
-                            <p class="publication-meta">H Wen, Y Lin, F Wu, H Wan, S Guo, L Wu, C Song, Y Xu</p>
-                            <p class="publication-meta">2021 IEEE 37th International Conference on Data Engineering
-                                (ICDE), 2141-2146</p>
-                        </td>
-                        <td class="cited-by">34</td>
-                        <td class="year">2021</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <p class="publication-title">Graph2route: A dynamic spatial-temporal graph neural network
-                                for pick-up and delivery route prediction</p>
-                            <p class="publication-meta">H Wen, Y Lin, X Mao, F Wu, Y Zhao, H Wang, J Zheng, L Wu, H Hu,
-                                ...</p>
-                            <p class="publication-meta">Proceedings of the 28th ACM SIGKDD conference on knowledge
-                                discovery and …</p>
-                        </td>
-                        <td class="cited-by">32</td>
-                        <td class="year">2022</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <p class="publication-title">Deeproute+: Modeling couriers’ spatial-temporal behaviors and
-                                decision preferences for package pick-up route prediction</p>
-                            <p class="publication-meta">H Wen, Y Lin, H Wan, S Guo, F Wu, L Wu, C Song, Y Xu</p>
-                            <p class="publication-meta">ACM Transactions on Intelligent Systems and Technology (TIST) 13
-                                (2), 1-23</p>
-                        </td>
-                        <td class="cited-by">16</td>
-                        <td class="year">2022</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <p class="publication-title">Enough waiting for the couriers: Learning to estimate package
-                                pick-up arrival time from couriers’ spatial-temporal behaviors</p>
-                            <p class="publication-meta">H Wen, Y Lin, F Wu, H Wan, Z Sun, T Cai, H Liu, S Guo, J Zheng,
-                                C Song, ...</p>
-                            <p class="publication-meta">ACM Transactions on Intelligent Systems and Technology 14 (3),
-                                1-22</p>
-                        </td>
-                        <td class="cited-by">10</td>
-                        <td class="year">2023</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <p class="publication-title">Modeling intra-and inter-community information for route and time prediction in last-mile delivery</p>
-                            <p class="publication-meta">Y Qiang, H Wen, L Wu, X Mao, F Wu, H Wan, H Hu</p>
-                            <p class="publication-meta">2023 IEEE 39th International Conference on Data Engineering (ICDE), 3106-3112</p>
-                        </td>
-                        <td class="cited-by">7</td>
-                        <td class="year">2023</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <p class="publication-title">A graph-based min-# and error-optimal trajectory simplification
-                                algorithm and its extension towards online services</p>
-                            <p class="publication-meta">F Wu, K Fu, Y Wang, Z Xiao</p>
-                            <p class="publication-meta">ISPRS International Journal of Geo-Information 6 (1), 19</p>
-                        </td>
-                        <td class="cited-by">6</td>
-                        <td class="year">2017</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <p class="publication-title">GMDNet: A graph-based mixture density network for estimating
-                                packages’ multimodal travel time distribution</p>
-                            <p class="publication-meta">X Mao, H Wan, H Wen, F Wu, J Zheng, Y Qiang, S Guo, L Wu, H Hu,
-                                Y Lin</p>
-                            <p class="publication-meta">Proceedings of the AAAI Conference on Artificial Intelligence 37
-                                (4), 4561-4568</p>
-                        </td>
-                        <td class="cited-by">4</td>
-                        <td class="year">2023</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <p class="publication-title">M2G4RTP: A Multi-Level and Multi-Task Graph Model for
-                                Instant-Logistics Route and Time Joint Prediction</p>
-                            <p class="publication-meta">T Cai, H Wan, F Wu, H Wen, S Guo, L Wu, H Hu, Y Lin</p>
-                            <p class="publication-meta">2023 IEEE 39th International Conference on Data Engineering
-                                (ICDE), 3296-3308</p>
-                        </td>
-                        <td class="cited-by">4</td>
-                        <td class="year">2023</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <p class="publication-title">Modeling Spatial–Temporal Constraints and Spatial-Transfer Patterns for Couriers’ Package Pick-up Route Prediction</p>
-                            <p class="publication-meta">H Wen, Y Lin, Y Hu, F Wu, M Xia, X Zhang, L Wu, H Hu, H Wan</p>
-                            <p class="publication-meta">MIEEE Transactions on Intelligent Transportation Systems</p>
-                        </td>
-                        <td class="cited-by">3</td>
-                        <td class="year">2023</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <p class="publication-title">Learning a Contextual and Topological Representation of
-                                Areas-of-Interest for On-Demand Delivery Application</p>
-                            <p class="publication-meta">M Yue, T Sun, F Wu, L Wu, Y Xu, C Shahabi</p>
-                            <p class="publication-meta">Machine Learning and Knowledge Discovery in Databases: Applied
-                                Data Science …</p>
-                        </td>
-                        <td class="cited-by">1</td>
-                        <td class="year">2021</td>
-                    </tr>
-                    <!-- 显示论文总数 -->
-                    <tr>
-                        <td colspan="3" style="text-align: center; font-size: 14px; color: black;">
-                            Articles 1–13, Total Citations 453, h-index 7
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+        <!-- Experience Section -->
+        <div class="bg-white rounded-lg shadow-sm p-5 mb-6">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-3">Work Experience</h2>
+            <div class="space-y-5">
+                <!-- CITIC Securities -->
+                <div class="border-l-4 border-primary pl-4">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800">Lead Software Engineer</h3>
+                            <p class="text-gray-600">CITIC Securities</p>
+                        </div>
+                        <div class="text-right">
+                            <p class="text-gray-600">Dec 2022 - Present</p>
+                            <p class="text-gray-500">Hong Kong SAR · Hybrid</p>
+                        </div>
+                    </div>
+                    <ul class="mt-3 space-y-2 text-gray-600">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                            <span>Led the development of an enterprise-grade AI platform from scratch, integrating LLM-powered tools such as intelligent assistants, text/image generation, code generation, and knowledge-based Q&A services.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                            <span>Built RAG-based solutions for multiple business scenarios, including regulatory Q&A, research report analysis, and intelligent customer support.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                            <span>Designed and implemented a unified business operation system for structured products.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Alibaba -->
+                <div class="border-l-4 border-primary pl-4">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800">AI Expert</h3>
+                            <p class="text-gray-600">Alibaba Group</p>
+                        </div>
+                        <div class="text-right">
+                            <p class="text-gray-600">Jul 2017 - Dec 2022</p>
+                            <p class="text-gray-500">Beijing, China · On-site</p>
+                        </div>
+                    </div>
+                    <ul class="mt-3 space-y-2 text-gray-600">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                            <span>Led the development of large-scale pre-trained language models for address understanding and geographic information processing.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                            <span>Designed and implemented spatio-temporal neural networks for delivery time prediction.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                            <span>Developed reinforcement learning-based optimization models for dynamic scheduling.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
 
+        <!-- Publications Section -->
+        <div class="bg-white rounded-lg shadow-sm p-5 mb-6">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-3">Publications</h2>
+            <div id="publications" class="space-y-4">
+                <!-- Publications will be loaded dynamically -->
+                <div class="text-center text-gray-500">
+                    <i class="fas fa-spinner fa-spin mr-2"></i>
+                    Loading publications...
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="bg-white rounded-lg shadow-sm p-5">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-3">Contact</h2>
+            <div class="flex flex-wrap gap-4">
+                <a href="mailto:wufancia@gmail.com" class="flex items-center text-gray-600 hover:text-primary">
+                    <i class="fas fa-envelope mr-2"></i>
+                    wufancia@gmail.com
+                </a>
+                <a href="https://scholar.google.com/citations?user=UsixouIAAAAJ&hl=en" target="_blank" class="flex items-center text-gray-600 hover:text-primary">
+                    <i class="fas fa-graduation-cap mr-2"></i>
+                    Google Scholar
+                </a>
+                <a href="https://github.com/fanwumax" target="_blank" class="flex items-center text-gray-600 hover:text-primary">
+                    <i class="fab fa-github mr-2"></i>
+                    GitHub
+                </a>
+            </div>
+        </div>
     </div>
 
-    <footer>
-        &copy; 2024 Fan Wu. All rights reserved.
-    </footer>
+    <script>
+        function switchLanguage(lang) {
+            document.documentElement.setAttribute('data-lang', lang);
+        }
 
+        // Initialize with English
+        switchLanguage('en');
+
+        // Function to load publications from Google Scholar
+        async function loadPublications() {
+            try {
+                // This is a placeholder for the actual Google Scholar API integration
+                // You would need to implement this based on your specific requirements
+                const response = await fetch('YOUR_GOOGLE_SCHOLAR_API_ENDPOINT');
+                const data = await response.json();
+                
+                // Update the publications section with the fetched data
+                const publicationsContainer = document.getElementById('publications');
+                // Add your publication rendering logic here
+            } catch (error) {
+                console.error('Error loading publications:', error);
+            }
+        }
+
+        // Load publications when the page loads
+        loadPublications();
+    </script>
 </body>
 
 </html>
