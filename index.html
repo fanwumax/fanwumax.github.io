@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600;700&family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
         tailwind.config = {
             theme: {
@@ -238,14 +240,41 @@
         </div>
 
         <!-- Publications Section -->
-        <div class="bg-white rounded-lg shadow-sm p-5 mb-6">
-            <h2 class="text-2xl font-semibold text-gray-800 mb-3">Publications</h2>
-            <div id="publications" class="space-y-4">
-                <!-- Publications will be loaded dynamically -->
-                <div class="text-center text-gray-500">
-                    <i class="fas fa-spinner fa-spin mr-2"></i>
-                    Loading publications...
+        <div class="bg-white rounded-lg shadow-sm p-6 mb-6">
+            <div class="flex justify-between items-center mb-4">
+                <h2 class="text-2xl font-semibold text-gray-800">
+                    <span class="en">Publications</span>
+                    <span class="zh">发表论文</span>
+                </h2>
+                <p class="text-sm text-gray-500" id="lastUpdated"></p>
+            </div>
+
+            <!-- Citation Stats -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6" id="citationStats">
+                <!-- Will be populated by JavaScript -->
+            </div>
+
+            <!-- Citation Graph -->
+            <div class="mb-6">
+                <div class="w-full h-64 bg-gray-50 rounded-lg p-4">
+                    <canvas id="citationGraph"></canvas>
                 </div>
+            </div>
+
+            <!-- Publications List -->
+            <div class="overflow-x-auto">
+                <table class="w-full">
+                    <thead>
+                        <tr class="border-b">
+                            <th class="text-left py-3 pr-4 font-semibold text-gray-900">Title</th>
+                            <th class="text-center py-3 px-4 font-semibold text-gray-900 w-32">Cited by</th>
+                            <th class="text-center py-3 pl-4 font-semibold text-gray-900 w-24">Year</th>
+                        </tr>
+                    </thead>
+                    <tbody id="publicationsList">
+                        <!-- Will be populated by JavaScript -->
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
@@ -272,24 +301,178 @@
         // Initialize with English
         switchLanguage('en');
 
-        // Function to load publications from Google Scholar
-        async function loadPublications() {
+        async function loadScholarData() {
             try {
-                // This is a placeholder for the actual Google Scholar API integration
-                // You would need to implement this based on your specific requirements
-                const response = await fetch('YOUR_GOOGLE_SCHOLAR_API_ENDPOINT');
+                const response = await fetch('data/scholar_data.json');
                 const data = await response.json();
                 
-                // Update the publications section with the fetched data
-                const publicationsContainer = document.getElementById('publications');
-                // Add your publication rendering logic here
+                // Update last updated time
+                const lastUpdated = new Date(data.last_updated);
+                document.getElementById('lastUpdated').textContent = `Last updated: ${lastUpdated.toLocaleString()}`;
+
+                // Update citation stats
+                const statsHtml = `
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <div class="text-center">
+                            <h3 class="text-lg font-medium text-gray-700 mb-2">
+                                <span class="en">Citations</span>
+                                <span class="zh">总引用</span>
+                            </h3>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div>
+                                    <p class="text-2xl font-bold text-gray-900">${data.author.cited_by.citations.all}</p>
+                                    <p class="text-sm text-gray-600">All</p>
+                                </div>
+                                <div>
+                                    <p class="text-2xl font-bold text-gray-900">${data.author.cited_by.citations.since_2019}</p>
+                                    <p class="text-sm text-gray-600">Since 2019</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <div class="text-center">
+                            <h3 class="text-lg font-medium text-gray-700 mb-2">h-index</h3>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div>
+                                    <p class="text-2xl font-bold text-gray-900">${data.author.cited_by.h_index.all}</p>
+                                    <p class="text-sm text-gray-600">All</p>
+                                </div>
+                                <div>
+                                    <p class="text-2xl font-bold text-gray-900">${data.author.cited_by.h_index.since_2019}</p>
+                                    <p class="text-sm text-gray-600">Since 2019</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <div class="text-center">
+                            <h3 class="text-lg font-medium text-gray-700 mb-2">i10-index</h3>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div>
+                                    <p class="text-2xl font-bold text-gray-900">${data.author.cited_by.i10_index.all}</p>
+                                    <p class="text-sm text-gray-600">All</p>
+                                </div>
+                                <div>
+                                    <p class="text-2xl font-bold text-gray-900">${data.author.cited_by.i10_index.since_2019}</p>
+                                    <p class="text-sm text-gray-600">Since 2019</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                document.getElementById('citationStats').innerHTML = statsHtml;
+
+                // Update citation graph
+                const ctx = document.getElementById('citationGraph').getContext('2d');
+                // 如果已存在图表，先销毁
+                if (window.citationChart) {
+                    window.citationChart.destroy();
+                }
+                window.citationChart = new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: data.citation_graph.map(item => item.year),
+                        datasets: [{
+                            label: 'Citations',
+                            data: data.citation_graph.map(item => item.citations),
+                            backgroundColor: '#60A5FA', // blue-400
+                            borderColor: '#3B82F6', // blue-500
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                display: false
+                            },
+                            tooltip: {
+                                backgroundColor: '#1F2937',
+                                titleFont: {
+                                    family: 'Source Sans 3'
+                                },
+                                bodyFont: {
+                                    family: 'Source Sans 3'
+                                },
+                                callbacks: {
+                                    label: function(context) {
+                                        return `Citations: ${context.parsed.y}`;
+                                    }
+                                }
+                            }
+                        },
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                title: {
+                                    display: true,
+                                    text: 'Citations',
+                                    font: {
+                                        family: 'Source Sans 3',
+                                        size: 12
+                                    }
+                                },
+                                ticks: {
+                                    font: {
+                                        family: 'Source Sans 3'
+                                    }
+                                }
+                            },
+                            x: {
+                                title: {
+                                    display: true,
+                                    text: 'Year',
+                                    font: {
+                                        family: 'Source Sans 3',
+                                        size: 12
+                                    }
+                                },
+                                ticks: {
+                                    font: {
+                                        family: 'Source Sans 3'
+                                    }
+                                }
+                            }
+                        }
+                    }
+                });
+
+                // Update publications list
+                const publicationsHtml = data.publications.map(pub => `
+                    <tr class="border-b hover:bg-gray-50">
+                        <td class="py-4 pr-4">
+                            <div class="space-y-1">
+                                <a href="${pub.link}" target="_blank" 
+                                   class="text-lg font-medium text-gray-900 hover:text-primary block">
+                                    ${pub.title}
+                                </a>
+                                <p class="text-gray-600">${pub.authors}</p>
+                                <p class="text-gray-500">${pub.publication}</p>
+                            </div>
+                        </td>
+                        <td class="text-center py-4 px-4">
+                            <a href="${pub.cited_by.link}" target="_blank" 
+                               class="text-primary hover:text-primary-dark">
+                                ${pub.cited_by.value}
+                            </a>
+                        </td>
+                        <td class="text-center py-4 pl-4">${pub.year}</td>
+                    </tr>
+                `).join('');
+                document.getElementById('publicationsList').innerHTML = publicationsHtml;
+
             } catch (error) {
-                console.error('Error loading publications:', error);
+                console.error('Error loading scholar data:', error);
             }
         }
 
-        // Load publications when the page loads
-        loadPublications();
+        // Load data when page loads
+        loadScholarData();
+
+        // Reload data every hour
+        setInterval(loadScholarData, 3600000);
     </script>
 </body>
 
