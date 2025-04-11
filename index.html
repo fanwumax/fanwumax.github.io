@@ -48,13 +48,13 @@
             height: 140px;
             border-radius: 50%;
             object-fit: cover;
-            object-position: center 30%; /* 调整裁剪位置，更多显示脸部区域 */
+            object-position: center 30%;
         }
         .content-text {
             font-family: 'Source Sans 3', sans-serif;
             font-size: 1.125rem;
             line-height: 1.75;
-            color: #374151;  /* text-gray-700 的颜色值 */
+            color: #374151;
         }
         h1, h2, h3 {
             font-family: 'Lora', serif;
@@ -76,210 +76,468 @@
             background-color: #EFF6FF;
             color: #3B82F6;
         }
+        .nav-link {
+            padding: 0.5rem 1rem;
+            border-radius: 0.375rem;
+            transition: all 0.2s;
+            cursor: pointer;
+        }
+        .nav-link:hover {
+            background-color: #EFF6FF;
+            color: #3B82F6;
+        }
+        .nav-link.active {
+            background-color: #EFF6FF;
+            color: #3B82F6;
+            font-weight: 500;
+        }
+        .news-card {
+            transition: transform 0.2s;
+        }
+        .news-card:hover {
+            transform: translateY(-4px);
+        }
+        .news-image {
+            aspect-ratio: 16/9;
+            object-fit: cover;
+        }
     </style>
 </head>
 
 <body class="bg-gray-50 font-sans">
-    <div class="container mx-auto px-2 py-6 max-w-6xl">
-        <!-- Header with Language Switch and Contact -->
-        <div class="flex justify-between items-center mb-6">
-            <div class="flex items-center space-x-6">
-                <div class="relative">
-                    <img src="my_profile.jpg" 
-                         alt="Fan Wu" 
-                         class="profile-image border-2 border-primary shadow-md"
-                         style="image-rendering: -webkit-optimize-contrast;"
-                         loading="eager"
-                    >
-                </div>
-                <div>
-                    <h1 class="text-4xl font-bold text-gray-800 mb-2">Fan Wu (吴凡)</h1>
-                    <div class="flex flex-wrap gap-3 text-sm">
-                        <a href="mailto:wufancia@gmail.com" class="flex items-center text-gray-600 hover:text-primary transition-colors">
-                            <i class="fas fa-envelope mr-1"></i>
-                            wufancia@gmail.com
-                        </a>
-                        <a href="https://scholar.google.com/citations?user=UsixouIAAAAJ&hl=en" target="_blank" class="flex items-center text-gray-600 hover:text-primary transition-colors">
-                            <i class="fas fa-graduation-cap mr-1"></i>
-                            Google Scholar
-                        </a>
-                        <a href="https://github.com/fanwumax" target="_blank" class="flex items-center text-gray-600 hover:text-primary transition-colors">
-                            <i class="fab fa-github mr-1"></i>
-                            GitHub
-                        </a>
+    <div class="container mx-auto px-4 py-6 max-w-[90rem]">
+        <div class="flex gap-12">
+            <!-- Left Navigation -->
+            <div class="w-48 hidden lg:block">
+                <div class="sticky top-6 space-y-2">
+                    <div class="nav-link" onclick="scrollToSection('about')">
+                        <span class="en">About Me</span>
+                        <span class="zh">关于我</span>
+                    </div>
+                    <div class="nav-link" onclick="scrollToSection('skills')">
+                        <span class="en">Skills</span>
+                        <span class="zh">专业技能</span>
+                    </div>
+                    <div class="nav-link" onclick="scrollToSection('news')">
+                        <span class="en">News</span>
+                        <span class="zh">最新动态</span>
+                    </div>
+                    <div class="nav-link" onclick="scrollToSection('experience')">
+                        <span class="en">Work Experience</span>
+                        <span class="zh">工作经历</span>
+                    </div>
+                    <div class="nav-link" onclick="scrollToSection('publications')">
+                        <span class="en">Publications</span>
+                        <span class="zh">发表论文</span>
                     </div>
                 </div>
             </div>
-            <div class="flex space-x-2">
-                <button onclick="switchLanguage('en')" id="en-btn" class="lang-btn">EN</button>
-                <button onclick="switchLanguage('zh')" id="zh-btn" class="lang-btn">中文</button>
-            </div>
-        </div>
 
-        <!-- About Section -->
-        <div class="bg-white rounded-lg shadow-sm p-5 mb-6">
-            <h2 class="text-2xl font-semibold text-gray-800 mb-3">
-                <span class="en">About Me</span>
-                <span class="zh">关于我</span>
-            </h2>
-            <div class="prose max-w-none">
-                <p class="en content-text">
-                    I am an AI researcher and software engineer with 7 years of experience in machine learning, deep learning, and large language models (LLMs). I hold a PhD from the University of Chinese Academy of Sciences. My expertise spans from AI model development to building large-scale enterprise AI platforms, with a focus on applying GenAI technologies to real-world business scenarios.
-                </p>
-                <p class="en content-text mt-2">
-                    I have hands-on experience in end-to-end AI system development, including model research, infrastructure design, and productization. In recent years, I have led the design and implementation of an enterprise AI platform, integrating LLM-powered tools such as intelligent assistants, RAG-based solutions, and content generation systems.
-                </p>
-                <p class="en content-text mt-2">
-                    My research background includes publishing papers at top conferences such as AAAI, ICDE, and KDD, covering topics like spatio-temporal data mining, sequence modeling, and reinforcement learning. I enjoy bridging AI research and product development, driving innovation from ideas to scalable solutions.
-                </p>
-                <p class="zh content-text">
-                    我是一名资深的人工智能研究员和软件工程师，拥有7年AI与深度学习研发经验，博士毕业于中国科学院大学。我的研究和工作方向聚焦于大模型（LLM）相关技术的应用与落地，擅长从算法研究到企业级平台系统的端到端建设。
-                </p>
-                <p class="zh content-text mt-2">
-                    我具备丰富的AI平台研发与工程实践经验，曾主导企业内部大模型平台的架构设计与开发，覆盖智能助手、RAG问答、内容生成等多种场景。
-                </p>
-                <p class="zh content-text mt-2">
-                    此外，我长期从事AI相关研究，在AAAI、ICDE、KDD等国际顶级会议发表多篇论文，研究方向包括时空数据挖掘、序列建模与强化学习。我希望能够将AI技术与实际业务深度融合，推动创新型产品的落地与规模化应用。
-                </p>
-            </div>
-        </div>
-
-        <!-- Experience Section -->
-        <div class="bg-white rounded-lg shadow-sm p-5 mb-6">
-            <h2 class="text-2xl font-semibold text-gray-800 mb-3">
-                <span class="en">Work Experience</span>
-                <span class="zh">工作经历</span>
-            </h2>
-            <div class="space-y-5">
-                <!-- CITIC Securities -->
-                <div class="border-l-4 border-primary pl-4">
-                    <div class="flex justify-between items-start">
+            <!-- Main Content -->
+            <div class="flex-1 max-w-[72rem]">
+                <!-- Header with Language Switch and Contact -->
+                <div class="flex justify-between items-center mb-6">
+                    <div class="flex items-center space-x-6">
+                        <div class="relative">
+                            <img src="images/my_profile.jpg" 
+                                 alt="Fan Wu" 
+                                 class="profile-image border-2 border-primary shadow-md"
+                                 style="image-rendering: -webkit-optimize-contrast;"
+                                 loading="eager"
+                            >
+                        </div>
                         <div>
-                            <h3 class="text-xl font-semibold text-gray-800">
-                                <span class="en">Lead Software Engineer</span>
-                                <span class="zh">高级软件工程师</span>
-                            </h3>
-                            <p class="text-gray-600">
-                                <span class="en">CITIC Securities</span>
-                                <span class="zh">中信证券</span>
-                            </p>
-                        </div>
-                        <div class="text-right">
-                            <p class="text-gray-600">
-                                <span class="en">Dec 2022 - Present</span>
-                                <span class="zh">2022年12月 - 至今</span>
-                            </p>
-                            <p class="text-gray-500">
-                                <span class="en">Hong Kong SAR · Hybrid</span>
-                                <span class="zh">香港特别行政区 · 混合办公</span>
-                            </p>
+                            <h1 class="text-4xl font-bold text-gray-800 mb-2">Fan Wu (吴凡)</h1>
+                            <div class="flex flex-wrap gap-3 text-sm">
+                                <a href="mailto:wufancia@gmail.com" class="flex items-center text-gray-600 hover:text-primary transition-colors">
+                                    <i class="fas fa-envelope mr-1"></i>
+                                    wufancia@gmail.com
+                                </a>
+                                <a href="https://scholar.google.com/citations?user=UsixouIAAAAJ&hl=en" target="_blank" class="flex items-center text-gray-600 hover:text-primary transition-colors">
+                                    <i class="fas fa-graduation-cap mr-1"></i>
+                                    Google Scholar
+                                </a>
+                                <a href="https://www.webofscience.com/wos/author/record/LOR-0432-2024" target="_blank" class="flex items-center text-gray-600 hover:text-primary transition-colors">
+                                    <i class="fas fa-globe-americas mr-1"></i>
+                                    Web of Science
+                                </a>
+                                <a href="https://www.semanticscholar.org/author/Fan-Wu/2116491329" target="_blank" class="flex items-center text-gray-600 hover:text-primary transition-colors">
+                                    <i class="fas fa-book-open mr-1"></i>
+                                    Semantic Scholar
+                                </a>
+                                <a href="https://orcid.org/0000-0001-8869-186X" target="_blank" class="flex items-center text-gray-600 hover:text-primary transition-colors">
+                                    <i class="fab fa-orcid mr-1"></i>
+                                    ORCID
+                                </a>
+                                <a href="https://github.com/fanwumax" target="_blank" class="flex items-center text-gray-600 hover:text-primary transition-colors">
+                                    <i class="fab fa-github mr-1"></i>
+                                    GitHub
+                                </a>
+                            </div>
                         </div>
                     </div>
-                    <ul class="mt-3 space-y-2">
-                        <li class="flex items-start content-text">
-                            <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
-                            <span class="en">Led the development of an enterprise-grade AI platform from scratch, integrating LLM-powered tools such as intelligent assistants, text/image generation, code generation, and knowledge-based Q&A services.</span>
-                            <span class="zh">主导开发企业级AI平台，从零开始整合大语言模型驱动的工具，包括智能助手、文本/图像生成、代码生成和基于知识的问答服务。</span>
-                        </li>
-                        <li class="flex items-start content-text">
-                            <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
-                            <span class="en">Built RAG-based solutions for multiple business scenarios, including regulatory Q&A, research report analysis, and intelligent customer support.</span>
-                            <span class="zh">构建基于检索增强生成（RAG）的解决方案，应用于多个业务场景，包括监管问答、研究报告分析和智能客服支持。</span>
-                        </li>
-                        <li class="flex items-start content-text">
-                            <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
-                            <span class="en">Designed and implemented a unified business operation system for structured products.</span>
-                            <span class="zh">设计并实现结构化产品统一业务运营系统。</span>
-                        </li>
-                    </ul>
+                    <div class="flex space-x-2">
+                        <button onclick="switchLanguage('en')" id="en-btn" class="lang-btn">EN</button>
+                        <button onclick="switchLanguage('zh')" id="zh-btn" class="lang-btn">中文</button>
+                    </div>
                 </div>
 
-                <!-- Alibaba -->
-                <div class="border-l-4 border-primary pl-4">
-                    <div class="flex justify-between items-start">
+                <!-- About Section -->
+                <div id="about" class="bg-white rounded-lg shadow-sm p-5 mb-6">
+                    <h2 class="text-2xl font-semibold text-gray-800 mb-3">
+                        <span class="en">About Me</span>
+                        <span class="zh">关于我</span>
+                    </h2>
+                    <div class="prose max-w-none">
+                        <p class="en content-text">
+                            I am an AI researcher and software engineer with 7 years of experience in machine learning, deep learning, and large language models (LLMs). I hold a PhD from the University of Chinese Academy of Sciences. My expertise spans from AI model development to building large-scale enterprise AI platforms, with a focus on applying GenAI technologies to real-world business scenarios.
+                        </p>
+                        <p class="en content-text mt-2">
+                            I have hands-on experience in end-to-end AI system development, including model research, infrastructure design, and productization. In recent years, I have led the design and implementation of an enterprise AI platform, integrating LLM-powered tools such as intelligent assistants, RAG-based solutions, and content generation systems.
+                        </p>
+                        <p class="en content-text mt-2">
+                            My research background includes publishing papers at top conferences such as AAAI, ICDE, and KDD, covering topics like spatio-temporal data mining, sequence modeling, and reinforcement learning. I enjoy bridging AI research and product development, driving innovation from ideas to scalable solutions.
+                        </p>
+                        <p class="zh content-text">
+                            我是一名资深的人工智能研究员和软件工程师，拥有7年AI与深度学习研发经验，博士毕业于中国科学院大学。我的研究和工作方向聚焦于大模型（LLM）相关技术的应用与落地，擅长从算法研究到企业级平台系统的端到端建设。
+                        </p>
+                        <p class="zh content-text mt-2">
+                            我具备丰富的AI平台研发与工程实践经验，曾主导企业内部大模型平台的架构设计与开发，覆盖智能助手、RAG问答、内容生成等多种场景。
+                        </p>
+                        <p class="zh content-text mt-2">
+                            此外，我长期从事AI相关研究，在AAAI、ICDE、KDD等国际顶级会议发表多篇论文，研究方向包括时空数据挖掘、序列建模与强化学习。我希望能够将AI技术与实际业务深度融合，推动创新型产品的落地与规模化应用。
+                        </p>
+                    </div>
+                </div>
+
+
+                <!-- Skills Section -->
+                <div id="skills" class="bg-white rounded-lg shadow-sm p-5 mb-6">
+                    <h2 class="text-2xl font-semibold text-gray-800 mb-3">
+                        <span class="en">Skills</span>
+                        <span class="zh">专业技能</span>
+                    </h2>
+                    <div class="space-y-4">
+                        <!-- AI Research -->
                         <div>
-                            <h3 class="text-xl font-semibold text-gray-800">
-                                <span class="en">AI Expert</span>
-                                <span class="zh">人工智能专家</span>
+                            <h3 class="text-lg font-medium text-gray-700 mb-2">
+                                <span class="en">AI Research</span>
+                                <span class="zh">人工智能研究</span>
                             </h3>
-                            <p class="text-gray-600">
-                                <span class="en">Alibaba Group</span>
-                                <span class="zh">阿里巴巴集团</span>
-                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-blue-50 text-primary rounded-full text-sm">Generative AI</span>                        <span class="px-3 py-1 bg-blue-50 text-primary rounded-full text-sm">Large Language Models</span>
+                                <span class="px-3 py-1 bg-blue-50 text-primary rounded-full text-sm">Deep Learning</span>
+                                <span class="px-3 py-1 bg-blue-50 text-primary rounded-full text-sm">Time Series Forecasting</span>
+                                <span class="px-3 py-1 bg-blue-50 text-primary rounded-full text-sm">Natural Language Processing</span>
+                                <span class="px-3 py-1 bg-blue-50 text-primary rounded-full text-sm">Reinforcement Learning</span>
+                                <span class="px-3 py-1 bg-blue-50 text-primary rounded-full text-sm">Sequential Decision Making</span>
+                            </div>
                         </div>
-                        <div class="text-right">
-                            <p class="text-gray-600">
-                                <span class="en">Jul 2017 - Dec 2022</span>
-                                <span class="zh">2017年7月 - 2022年12月</span>
-                            </p>
-                            <p class="text-gray-500">
-                                <span class="en">Beijing, China · On-site</span>
-                                <span class="zh">中国北京 · 办公室办公</span>
-                            </p>
+                        
+                        <!-- Software Development -->
+                        <div>
+                            <h3 class="text-lg font-medium text-gray-700 mb-2">
+                                <span class="en">Software Development</span>
+                                <span class="zh">软件开发</span>
+                            </h3>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-green-50 text-secondary rounded-full text-sm">AI Platform Development</span>
+                                <span class="px-3 py-1 bg-green-50 text-secondary rounded-full text-sm">Model Deployment</span>
+                                <span class="px-3 py-1 bg-green-50 text-secondary rounded-full text-sm">ML Infrastructure</span>
+                                <span class="px-3 py-1 bg-green-50 text-secondary rounded-full text-sm">System Architecture</span>
+                                <span class="px-3 py-1 bg-green-50 text-secondary rounded-full text-sm">Scalable Systems</span>
+                                <span class="px-3 py-1 bg-green-50 text-secondary rounded-full text-sm">Data Structures</span>
+
+                            </div>
+                        </div>
+
+                        <!-- Programming -->
+                        <div>
+                            <h3 class="text-lg font-medium text-gray-700 mb-2">
+                                <span class="en">Programming</span>
+                                <span class="zh">编程技术</span>
+                            </h3>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-gray-50 text-gray-600 rounded-full text-sm">Python</span>
+                                <span class="px-3 py-1 bg-gray-50 text-gray-600 rounded-full text-sm">Java</span>
+                                <span class="px-3 py-1 bg-gray-50 text-gray-600 rounded-full text-sm">SQL</span>
+                                <span class="px-3 py-1 bg-gray-50 text-gray-600 rounded-full text-sm">PyTorch</span>
+                                <span class="px-3 py-1 bg-gray-50 text-gray-600 rounded-full text-sm">TensorFlow</span>
+                                <span class="px-3 py-1 bg-gray-50 text-gray-600 rounded-full text-sm">Spring Boot</span>
+                                <span class="px-3 py-1 bg-gray-50 text-gray-600 rounded-full text-sm">FastAPI</span>
+                                <span class="px-3 py-1 bg-gray-50 text-gray-600 rounded-full text-sm">Kubernetes</span>
+                                <span class="px-3 py-1 bg-gray-50 text-gray-600 rounded-full text-sm">Vector Databases</span>
+                            </div>
                         </div>
                     </div>
-                    <ul class="mt-3 space-y-2">
-                        <li class="flex items-start content-text">
-                            <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
-                            <span class="en">Led the development of large-scale pre-trained language models for address understanding and geographic information processing.</span>
-                            <span class="zh">主导开发大规模预训练语言模型，用于地址理解和地理信息处理。</span>
-                        </li>
-                        <li class="flex items-start content-text">
-                            <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
-                            <span class="en">Designed and implemented spatio-temporal neural networks for delivery time prediction.</span>
-                            <span class="zh">设计并实现时空神经网络，用于配送时间预测。</span>
-                        </li>
-                        <li class="flex items-start content-text">
-                            <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
-                            <span class="en">Developed reinforcement learning-based optimization models for dynamic scheduling.</span>
-                            <span class="zh">开发基于强化学习的优化模型，用于动态调度。</span>
-                        </li>
-                    </ul>
                 </div>
-            </div>
-        </div>
 
-        <!-- Publications Section -->
-        <div class="bg-white rounded-lg shadow-sm p-6 mb-6">
-            <div class="flex justify-between items-center mb-4">
-                <h2 class="text-2xl font-semibold text-gray-800">
-                    <span class="en">Publications</span>
-                    <span class="zh">发表论文</span>
-                </h2>
-                <p class="text-sm text-gray-500" id="lastUpdated"></p>
-            </div>
+                <!-- News Section -->
+                <div id="news" class="bg-white rounded-lg shadow-sm p-5 mb-6">
+                    <h2 class="text-2xl font-semibold text-gray-800 mb-6">
+                        <span class="en">News</span>
+                        <span class="zh">最新动态</span>
+                    </h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
+                        <!-- AI Marketing Platform -->
+                        <div class="news-card">
+                            <img src="images/product poster.jpg" alt="AI Marketing Platform" class="w-full rounded-lg news-image mb-4">
+                            <p class="text-sm text-gray-500 mb-2">Coming Soon</p>
+                            <h3 class="text-lg font-medium text-gray-900 mb-2">
+                                <span class="en">AI Content Marketing Platform</span>
+                                <span class="zh">AI内容营销平台</span>
+                            </h3>
+                            <p class="text-gray-600 text-sm">
+                                <span class="en">AI-powered content marketing platform with features including video script extraction and transcription, KOL content analysis, product image generation, and intelligent campaign planning.</span>
+                                <span class="zh">AI驱动的内容营销平台，支持视频文案提取与转写、KOL作品分析、产品图生成与活动智能策划。</span>
+                            </p>
+                        </div>
+                        <!-- AI Platform -->
+                        <div class="news-card cursor-pointer" onclick="window.open('https://www.aifancy.net/')">
+                            <img src="images/aiPlatform.png" alt="AI Platform" class="w-full rounded-lg news-image mb-4">
+                            <p class="text-sm text-gray-500 mb-2">May 21, 2024</p>
+                            <h3 class="text-lg font-medium text-gray-900 mb-2">
+                                <span class="en">AI Platform for Creation and Knowledge</span>
+                                <span class="zh">AI平台</span>
+                            </h3>
+                            <p class="text-gray-600 text-sm">
+                                <span class="en">All-in-one AI platform from intelligent conversation, AI assistant, to content generation, knowledge-based Q&A, image & video creation, and digital human services.</span>
+                                <span class="zh">全能AI平台，覆盖智能对话、AI助手、AI创作、知识库问答、AI绘画、音视频生成与数字人服务。</span>
+                            </p>
+                        </div>
 
-            <!-- Citation Stats -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6" id="citationStats">
-                <!-- Will be populated by JavaScript -->
-            </div>
+                        <!-- WeChat Mini Program 瑞鹭坊 -->
+                        <div class="news-card cursor-pointer" onclick="showMiniProgramPopup()">
+                            <img src="images/miniprogram.jpg" alt="瑞鹭坊小程序" class="w-full rounded-lg news-image mb-4">
+                            <p class="text-sm text-gray-500 mb-2">Mar 15, 2024</p>
+                            <h3 class="text-lg font-medium text-gray-900 mb-2">
+                                <span class="en">WeChat Mini Program: Ruilufang</span>
+                                <span class="zh">微信小程序 瑞鹭坊</span>
+                            </h3>
+                            <p class="text-gray-600 text-sm">
+                                <span class="en">AI-powered Q&A, content creation, image generation. Powered by top AI models and comprehensive prompt templates to boost learning and working efficiency.</span>
+                                <span class="zh">AI问答、创作、绘图一站式体验。顶尖大模型，最全提示词，助你高效学习与工作。</span>
+                            </p>
+                        </div>
 
-            <!-- Citation Graph -->
-            <div class="mb-6">
-                <div class="w-full h-64 bg-gray-50 rounded-lg p-4">
-                    <canvas id="citationGraph"></canvas>
+                        <!-- Mini Program Popup -->
+                        <div id="miniProgramPopup" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+                        <div class="bg-white p-4 rounded-lg text-center">
+                            <p class="mb-2 text-gray-800">请使用手机微信扫码体验</p>
+                            <img src="images/miniprogram id.jpg" alt="WeChat Mini Program QR Code" class="mx-auto mb-2 w-40 h-40">
+                            <button onclick="hideMiniProgramPopup()" class="mt-2 bg-gray-300 px-4 py-1 rounded">关闭</button>
+                        </div>
+                        </div>
+
+                        <script>
+                        function showMiniProgramPopup(){
+                            document.getElementById('miniProgramPopup').classList.remove('hidden')
+                        }
+                        function hideMiniProgramPopup(){
+                            document.getElementById('miniProgramPopup').classList.add('hidden')
+                        }
+                        </script>
+
+                    </div>
+                    <div class="text-center">
+                        <button class="px-6 py-2 bg-gray-100 text-gray-900 rounded-full hover:bg-gray-200 transition-colors">
+                            <span class="en">See more</span>
+                            <span class="zh">查看更多</span>
+                        </button>
+                    </div>
                 </div>
-            </div>
 
-            <!-- Publications List -->
-            <div class="overflow-x-auto">
-                <table class="w-full">
-                    <thead>
-                        <tr class="border-b">
-                            <th class="text-left py-3 pr-4 font-semibold text-gray-900">Title</th>
-                            <th class="text-center py-3 px-4 font-semibold text-gray-900 w-32">Cited by</th>
-                            <th class="text-center py-3 pl-4 font-semibold text-gray-900 w-24">Year</th>
-                        </tr>
-                    </thead>
-                    <tbody id="publicationsList">
+
+                <!-- Experience Section -->
+                <div id="experience" class="bg-white rounded-lg shadow-sm p-5 mb-6">
+                    <h2 class="text-2xl font-semibold text-gray-800 mb-3">
+                        <span class="en">Work Experience</span>
+                        <span class="zh">工作经历</span>
+                    </h2>
+                    <div class="space-y-5">
+                        <!-- CITIC Securities -->
+                        <div class="border-l-4 border-primary pl-4">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <h3 class="text-xl font-semibold text-gray-800">
+                                        <span class="en">Vice President of Intelligent Strategy</span>
+                                        <span class="zh">智能策略副总裁</span>
+                                    </h3>
+                                    <p class="text-gray-600">
+                                        <span class="en">CITIC Securities</span>
+                                        <span class="zh">中信证券</span>
+                                    </p>
+                                </div>
+                                <div class="text-right">
+                                    <p class="text-gray-600">
+                                        <span class="en">Dec 2022 - Present</span>
+                                        <span class="zh">2022年12月 - 至今</span>
+                                        <span class="citic-duration text-gray-500"></span>
+                                    </p>
+                                    <p class="text-gray-500">
+                                        <span class="en">Hong Kong, China · Beijing, China</span>
+                                        <span class="zh">中国香港 · 中国北京</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <ul class="mt-3 space-y-2">
+                                <li class="flex items-start content-text">
+                                    <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                                    <span class="en">Led the development of an enterprise-grade AI platform from scratch, integrating LLM-powered tools such as intelligent assistants, text/image generation, code generation, and knowledge-based Q&A services. The platform scaled over thousands of active users, enabling productivity improvements across the organization.</span>
+                                    <span class="zh">主导从零构建企业级AI平台，集成大语言模型（LLM）能力，包括智能助手、文本/图像生成、代码生成及知识问答服务，平台活跃用户规模超过数万人，助力组织内部效率提升。</span>
+                                </li>
+                                <li class="flex items-start content-text">
+                                    <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                                    <span class="en">Built RAG-based solutions for multiple business scenarios, including regulatory Q&A, research report analysis, and intelligent customer support, leveraging multi-modal data (text, documents, tables, and images) and advanced search capabilities.</span>
+                                    <span class="zh">基于RAG（检索增强生成）技术，构建了覆盖多个业务场景的AI解决方案，支持法规问答、研报分析、智能客服等场景，融合文本、文档、表格、图像等多模态数据，提升信息检索与知识获取能力。</span>
+                                </li>
+                                <li class="flex items-start content-text">
+                                    <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                                    <span class="en">Designed and implemented a unified business operation system for structured products, transforming offline business processes into automated online workflows, reducing manual efforts and operational risks.</span>
+                                    <span class="zh">设计并实现结构化产品的一站式业务运营系统，将原有线下流程全面线上化与自动化，显著降低人工操作成本与业务风险。</span>
+                                </li>
+                                <li class="flex items-start content-text">
+                                    <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                                    <span class="en">Contributed to AI-driven investment advisory services and financial data analytics, applying time-series forecasting models and facilitating strategy backtesting tools for business users.</span>
+                                    <span class="zh">参与构建AI驱动的投顾服务与金融数据分析能力，应用时间序列预测模型，支持业务用户进行策略回测与效果评估。</span>
+                                </li>
+                                <li class="flex items-start content-text">
+                                    <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                                    <span class="en">Managed a small team, driving technical design, project delivery, and cross-functional collaboration between engineering, data science, and business teams.</span>
+                                    <span class="zh">带领小型技术团队，负责技术方案设计、项目交付与跨团队协作，推动工程、算法与业务团队的高效联动。</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Alibaba -->
+                        <div class="border-l-4 border-primary pl-4">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <h3 class="text-xl font-semibold text-gray-800">
+                                        <span class="en">AI Expert</span>
+                                        <span class="zh">人工智能专家</span>
+                                    </h3>
+                                    <p class="text-gray-600">
+                                        <span class="en">Alibaba Group</span>
+                                        <span class="zh">阿里巴巴集团</span>
+                                    </p>
+                                </div>
+                                <div class="text-right">
+                                    <p class="text-gray-600">
+                                        <span class="en">Jul 2017 - Dec 2022</span>
+                                        <span class="zh">2017年7月 - 2022年12月</span>
+                                        <span class="alibaba-duration text-gray-500"></span>
+                                    </p>
+                                    <p class="text-gray-500">
+                                        <span class="en">Beijing, China · Hangzhou, China</span>
+                                        <span class="zh">中国北京 · 中国杭州</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <ul class="mt-3 space-y-2">
+                                <li class="flex items-start content-text">
+                                    <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                                    <span class="en">Led the development of large-scale pre-trained language models for address understanding and geographic information processing, enhancing the accuracy of address completion, location parsing, and route optimization in real-world logistics scenarios.</span>
+                                    <span class="zh">主导研发大规模地址与地理信息预训练语言模型，提升真实物流场景中的地址补全、位置解析与路径优化等任务的准确性与鲁棒性。</span>
+                                </li>
+                                <li class="flex items-start content-text">
+                                    <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                                    <span class="en">Designed and implemented spatio-temporal neural networks for delivery time prediction, leveraging hierarchical structures, attention mechanisms, and graph neural networks to capture complex spatial-temporal dependencies, improving customer experience and operational efficiency.</span>
+                                    <span class="zh">设计并实现时空神经网络，用于快递/物流场景下的到达时间（ETA）预测，融合层次结构、注意力机制与图神经网络，有效建模复杂的时空关系，提升客户体验与业务运营效率。</span>
+                                </li>
+                                <li class="flex items-start content-text">
+                                    <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                                    <span class="en">Developed reinforcement learning-based optimization models for dynamic scheduling of vehicles and staff, combining deep neural networks with decision-making algorithms to optimize routing and resource allocation, leading to significant cost savings and efficiency gains in large-scale operations.</span>
+                                    <span class="zh">开发基于强化学习的智能调度优化模型，结合深度学习与决策算法，实现车辆与人员的动态调度与路径优化，显著提升资源配置效率，助力大规模物流业务的降本增效。</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Publications Section -->
+                <div id="publications" class="bg-white rounded-lg shadow-sm p-6 mb-6">
+                    <div class="flex justify-between items-center mb-4">
+                        <h2 class="text-2xl font-semibold text-gray-800">
+                            <span class="en">Publications</span>
+                            <span class="zh">发表论文</span>
+                        </h2>
+                        <p class="text-sm text-gray-500" id="lastUpdated"></p>
+                    </div>
+
+                    <!-- Citation Stats -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6" id="citationStats">
                         <!-- Will be populated by JavaScript -->
-                    </tbody>
-                </table>
+                    </div>
+
+                    <!-- Citation Graph -->
+                    <div class="mb-6">
+                        <div class="w-full h-64 bg-gray-50 rounded-lg p-4">
+                            <canvas id="citationGraph"></canvas>
+                        </div>
+                    </div>
+
+                    <!-- Publications List -->
+                    <div class="overflow-x-auto">
+                        <table class="w-full">
+                            <thead>
+                                <tr class="border-b">
+                                    <th class="text-left py-3 pr-4 font-semibold text-gray-900">Title</th>
+                                    <th class="text-center py-3 px-4 font-semibold text-gray-900 w-32">Cited by</th>
+                                    <th class="text-center py-3 pl-4 font-semibold text-gray-900 w-24">Year</th>
+                                </tr>
+                            </thead>
+                            <tbody id="publicationsList">
+                                <!-- Will be populated by JavaScript -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
     <script>
+        function calculateDuration(startDate, endDate = new Date()) {
+            const start = new Date(startDate);
+            const end = endDate === 'Present' ? new Date() : new Date(endDate);
+            
+            let years = end.getFullYear() - start.getFullYear();
+            let months = end.getMonth() - start.getMonth();
+            
+            if (months < 0) {
+                years--;
+                months += 12;
+            }
+            
+            const yearsText = years > 0 ? `${years} ${years === 1 ? 'yr' : 'yrs'}` : '';
+            const monthsText = months > 0 ? `${months} ${months === 1 ? 'mo' : 'mos'}` : '';
+            
+            if (yearsText && monthsText) {
+                return `· ${yearsText} ${monthsText}`;
+            } else if (yearsText) {
+                return `· ${yearsText}`;
+            } else if (monthsText) {
+                return `· ${monthsText}`;
+            }
+            return '';
+        }
+
+        function updateDurations() {
+            const citicDuration = calculateDuration('2022-12-01');
+            const alibabaDuration = calculateDuration('2017-07-01', '2022-12-01');
+            
+            // Update CITIC duration
+            document.querySelectorAll('.citic-duration').forEach(el => {
+                el.textContent = citicDuration;
+            });
+            
+            // Update Alibaba duration
+            document.querySelectorAll('.alibaba-duration').forEach(el => {
+                el.textContent = alibabaDuration;
+            });
+        }
+
         function switchLanguage(lang) {
             document.documentElement.setAttribute('data-lang', lang);
             // Update button styles
@@ -470,9 +728,54 @@
 
         // Load data when page loads
         loadScholarData();
+        updateDurations();
 
         // Reload data every hour
         setInterval(loadScholarData, 3600000);
+        // Update durations every day
+        setInterval(updateDurations, 86400000);
+
+        // Add scroll to section function
+        function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            const offset = 20; // Offset from the top
+            const bodyRect = document.body.getBoundingClientRect().top;
+            const elementRect = section.getBoundingClientRect().top;
+            const elementPosition = elementRect - bodyRect;
+            const offsetPosition = elementPosition - offset;
+
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+            });
+
+            // Update active state
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+            });
+            event.currentTarget.classList.add('active');
+        }
+
+        // Update active section on scroll
+        window.addEventListener('scroll', () => {
+            const sections = ['about', 'news', 'skills', 'experience', 'publications'];
+            let currentSection = '';
+            
+            sections.forEach(section => {
+                const element = document.getElementById(section);
+                const rect = element.getBoundingClientRect();
+                if (rect.top <= 100 && rect.bottom >= 100) {
+                    currentSection = section;
+                }
+            });
+
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+                if (link.textContent.toLowerCase().includes(currentSection)) {
+                    link.classList.add('active');
+                }
+            });
+        });
     </script>
 </body>
 
