@@ -1,21 +1,21 @@
 {
-    "last_updated": "2025-04-14T01:19:59.548479Z",
+    "last_updated": "2025-04-15T01:19:02.499393Z",
     "author": {
         "name": "Fan Wu",
         "affiliations": "Alibaba Cainiao Network",
         "email": "Verified email at cainiao.com",
         "cited_by": {
             "citations": {
-                "all": 509,
-                "since_2019": 430
+                "all": 516,
+                "since_2019": 437
             },
             "h_index": {
                 "all": 9,
                 "since_2019": 9
             },
             "i10_index": {
-                "all": 8,
-                "since_2019": 8
+                "all": 9,
+                "since_2019": 9
             }
         }
     },
@@ -34,11 +34,11 @@
         },
         {
             "year": 2020,
-            "citations": 51
+            "citations": 52
         },
         {
             "year": 2021,
-            "citations": 44
+            "citations": 43
         },
         {
             "year": 2022,
@@ -54,7 +54,7 @@
         },
         {
             "year": 2025,
-            "citations": 24
+            "citations": 31
         }
     ],
     "publications": [
@@ -89,7 +89,7 @@
             "authors": "F Wu, L Wu",
             "publication": "Proceedings of the AAAI conference on artificial intelligence 33 (01), 774-781, 2019",
             "cited_by": {
-                "value": 59,
+                "value": 60,
                 "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=10567519635662410710"
             },
             "year": "2019"
@@ -101,7 +101,7 @@
             "authors": "H Wen, Y Lin, X Mao, F Wu, Y Zhao, H Wang, J Zheng, L Wu, H Hu, ...",
             "publication": "Proceedings of the 28th ACM SIGKDD conference on knowledge discovery and …, 2022",
             "cited_by": {
-                "value": 42,
+                "value": 43,
                 "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=15762923462730632688"
             },
             "year": "2022"
@@ -125,7 +125,7 @@
             "authors": "H Wen, Y Lin, H Wan, S Guo, F Wu, L Wu, C Song, Y Xu",
             "publication": "ACM Transactions on Intelligent Systems and Technology (TIST) 13 (2), 1-23, 2022",
             "cited_by": {
-                "value": 20,
+                "value": 21,
                 "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=11349664376475830398"
             },
             "year": "2022"
@@ -143,26 +143,26 @@
             "year": "2023"
         },
         {
-            "title": "Modeling intra-and inter-community information for route and time prediction in last-mile delivery",
-            "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=UsixouIAAAAJ&citation_for_view=UsixouIAAAAJ:Tyk-4Ss8FVUC",
-            "citation_id": "UsixouIAAAAJ:Tyk-4Ss8FVUC",
-            "authors": "Y Qiang, H Wen, L Wu, X Mao, F Wu, H Wan, H Hu",
-            "publication": "2023 IEEE 39th International Conference on Data Engineering (ICDE), 3106-3112, 2023",
-            "cited_by": {
-                "value": 10,
-                "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=3392569264024721955"
-            },
-            "year": "2023"
-        },
-        {
             "title": "Gmdnet: A graph-based mixture density network for estimating packages’ multimodal travel time distribution",
             "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=UsixouIAAAAJ&citation_for_view=UsixouIAAAAJ:qjMakFHDy7sC",
             "citation_id": "UsixouIAAAAJ:qjMakFHDy7sC",
             "authors": "X Mao, H Wan, H Wen, F Wu, J Zheng, Y Qiang, S Guo, L Wu, H Hu, Y Lin",
             "publication": "Proceedings of the AAAI Conference on Artificial Intelligence 37 (4), 4561-4568, 2023",
             "cited_by": {
-                "value": 9,
+                "value": 11,
                 "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=8085837359985723619"
+            },
+            "year": "2023"
+        },
+        {
+            "title": "Modeling intra-and inter-community information for route and time prediction in last-mile delivery",
+            "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=UsixouIAAAAJ&citation_for_view=UsixouIAAAAJ:Tyk-4Ss8FVUC",
+            "citation_id": "UsixouIAAAAJ:Tyk-4Ss8FVUC",
+            "authors": "Y Qiang, H Wen, L Wu, X Mao, F Wu, H Wan, H Hu",
+            "publication": "2023 IEEE 39th International Conference on Data Engineering (ICDE), 3106-3112, 2023",
+            "cited_by": {
+                "value": 11,
+                "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=3392569264024721955"
             },
             "year": "2023"
         },
@@ -173,7 +173,7 @@
             "authors": "T Cai, H Wan, F Wu, H Wen, S Guo, L Wu, H Hu, Y Lin",
             "publication": "2023 IEEE 39th International Conference on Data Engineering (ICDE), 3296-3308, 2023",
             "cited_by": {
-                "value": 8,
+                "value": 9,
                 "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=8894976767045999875"
             },
             "year": "2023"
@@ -203,16 +203,16 @@
             "year": "2023"
         },
         {
-            "title": "Learning a Contextual and Topological Representation of Areas-of-Interest for On-Demand Delivery Application",
+            "title": "Learning a contextual and topological representation of areas-of-interest for on-demand delivery application",
             "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=UsixouIAAAAJ&citation_for_view=UsixouIAAAAJ:2osOgNQ5qMEC",
             "citation_id": "UsixouIAAAAJ:2osOgNQ5qMEC",
             "authors": "M Yue, T Sun, F Wu, L Wu, Y Xu, C Shahabi",
-            "publication": "Machine Learning and Knowledge Discovery in Databases: Applied Data Science …, 2021",
+            "publication": "Joint European Conference on Machine Learning and Knowledge Discovery in …, 2020",
             "cited_by": {
                 "value": 1,
                 "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=11943530446606611326"
             },
-            "year": "2021"
+            "year": "2020"
         }
     ]
 }
