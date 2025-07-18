@@ -1,13 +1,13 @@
 {
-    "last_updated": "2025-07-17T01:37:41.410716Z",
+    "last_updated": "2025-07-18T01:28:18.466112Z",
     "author": {
         "name": "Fan Wu",
         "affiliations": "Alibaba Cainiao Network",
         "email": "Verified email at cainiao.com",
         "cited_by": {
             "citations": {
-                "all": 550,
-                "since_2019": 472
+                "all": 551,
+                "since_2019": 473
             },
             "h_index": {
                 "all": 10,
@@ -46,7 +46,7 @@
         },
         {
             "year": 2023,
-            "citations": 88
+            "citations": 89
         },
         {
             "year": 2024,
@@ -137,7 +137,7 @@
             "authors": "H Wen, Y Lin, F Wu, H Wan, Z Sun, T Cai, H Liu, S Guo, J Zheng, C Song, ...",
             "publication": "ACM Transactions on Intelligent Systems and Technology 14 (3), 1-22, 2023",
             "cited_by": {
-                "value": 14,
+                "value": 15,
                 "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=8916976141290721437"
             },
             "year": "2023"
