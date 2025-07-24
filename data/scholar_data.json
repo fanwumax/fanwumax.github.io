@@ -1,13 +1,13 @@
 {
-    "last_updated": "2025-07-23T01:38:42.124212Z",
+    "last_updated": "2025-07-24T01:38:07.805906Z",
     "author": {
         "name": "Fan Wu",
         "affiliations": "Alibaba Cainiao Network",
         "email": "Verified email at cainiao.com",
         "cited_by": {
             "citations": {
-                "all": 552,
-                "since_2019": 474
+                "all": 553,
+                "since_2019": 475
             },
             "h_index": {
                 "all": 10,
@@ -46,7 +46,7 @@
         },
         {
             "year": 2023,
-            "citations": 89
+            "citations": 90
         },
         {
             "year": 2024,
@@ -65,7 +65,7 @@
             "authors": "Z Xiao, Y Wang, K Fu, F Wu",
             "publication": "ISPRS International Journal of Geo-Information 6 (2), 57, 2017",
             "cited_by": {
-                "value": 220,
+                "value": 221,
                 "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=15332096482201017594"
             },
             "year": "2017"
