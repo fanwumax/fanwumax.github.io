@@ -1,13 +1,13 @@
 {
-    "last_updated": "2025-08-07T01:40:56.125382Z",
+    "last_updated": "2025-08-08T01:40:31.850623Z",
     "author": {
         "name": "Fan Wu",
         "affiliations": "Alibaba Cainiao Network",
         "email": "Verified email at cainiao.com",
         "cited_by": {
             "citations": {
-                "all": 556,
-                "since_2019": 478
+                "all": 559,
+                "since_2019": 481
             },
             "h_index": {
                 "all": 10,
@@ -54,7 +54,7 @@
         },
         {
             "year": 2025,
-            "citations": 72
+            "citations": 75
         }
     ],
     "publications": [
@@ -89,7 +89,7 @@
             "authors": "F Wu, L Wu",
             "publication": "Proceedings of the AAAI conference on artificial intelligence 33 (01), 774-781, 2019",
             "cited_by": {
-                "value": 64,
+                "value": 65,
                 "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=10567519635662410710"
             },
             "year": "2019"
@@ -101,7 +101,7 @@
             "authors": "H Wen, Y Lin, X Mao, F Wu, Y Zhao, H Wang, J Zheng, L Wu, H Hu, ...",
             "publication": "Proceedings of the 28th ACM SIGKDD conference on knowledge discovery and …, 2022",
             "cited_by": {
-                "value": 54,
+                "value": 55,
                 "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=15762923462730632688"
             },
             "year": "2022"
@@ -125,7 +125,7 @@
             "authors": "H Wen, Y Lin, H Wan, S Guo, F Wu, L Wu, C Song, Y Xu",
             "publication": "ACM Transactions on Intelligent Systems and Technology (TIST) 13 (2), 1-23, 2022",
             "cited_by": {
-                "value": 27,
+                "value": 28,
                 "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=11349664376475830398"
             },
             "year": "2022"
