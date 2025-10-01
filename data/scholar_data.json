@@ -1,13 +1,13 @@
 {
-    "last_updated": "2025-09-30T01:16:48.551182Z",
+    "last_updated": "2025-10-01T01:24:02.527451Z",
     "author": {
         "name": "Fan Wu",
         "affiliations": "Alibaba Cainiao Network",
         "email": "Verified email at cainiao.com",
         "cited_by": {
             "citations": {
-                "all": 579,
-                "since_2019": 501
+                "all": 580,
+                "since_2019": 502
             },
             "h_index": {
                 "all": 10,
@@ -54,7 +54,7 @@
         },
         {
             "year": 2025,
-            "citations": 96
+            "citations": 97
         }
     ],
     "publications": [
@@ -185,7 +185,7 @@
             "authors": "H Wen, Y Lin, Y Hu, F Wu, M Xia, X Zhang, L Wu, H Hu, H Wan",
             "publication": "IEEE Transactions on Intelligent Transportation Systems 24 (12), 13787-13800, 2023",
             "cited_by": {
-                "value": 6,
+                "value": 7,
                 "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=18039432900574767716"
             },
             "year": "2023"
