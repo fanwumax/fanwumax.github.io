@@ -1,13 +1,13 @@
 {
-    "last_updated": "2025-12-15T01:28:17.804168Z",
+    "last_updated": "2025-12-16T01:26:41.793779Z",
     "author": {
         "name": "Fan Wu",
         "affiliations": "Alibaba Cainiao Network",
         "email": "Verified email at cainiao.com",
         "cited_by": {
             "citations": {
-                "all": 596,
-                "since_2019": 516
+                "all": 597,
+                "since_2019": 517
             },
             "h_index": {
                 "all": 10,
@@ -50,11 +50,11 @@
         },
         {
             "year": 2024,
-            "citations": 153
+            "citations": 151
         },
         {
             "year": 2025,
-            "citations": 107
+            "citations": 110
         }
     ],
     "publications": [
@@ -101,7 +101,7 @@
             "authors": "H Wen, Y Lin, X Mao, F Wu, Y Zhao, H Wang, J Zheng, L Wu, H Hu, ...",
             "publication": "Proceedings of the 28th ACM SIGKDD conference on knowledge discovery and …, 2022",
             "cited_by": {
-                "value": 63,
+                "value": 64,
                 "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=15762923462730632688"
             },
             "year": "2022"
