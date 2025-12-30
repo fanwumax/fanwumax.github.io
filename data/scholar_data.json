@@ -1,13 +1,13 @@
 {
-    "last_updated": "2025-12-29T01:43:06.270928Z",
+    "last_updated": "2025-12-30T01:26:39.414033Z",
     "author": {
         "name": "Fan Wu",
         "affiliations": "Alibaba Cainiao Network",
         "email": "Verified email at cainiao.com",
         "cited_by": {
             "citations": {
-                "all": 600,
-                "since_2019": 519
+                "all": 601,
+                "since_2019": 520
             },
             "h_index": {
                 "all": 10,
@@ -113,7 +113,7 @@
             "authors": "H Wen, Y Lin, F Wu, H Wan, S Guo, L Wu, C Song, Y Xu",
             "publication": "2021 IEEE 37th International Conference on Data Engineering (ICDE), 2141-2146, 2021",
             "cited_by": {
-                "value": 48,
+                "value": 49,
                 "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=7480549552409953571"
             },
             "year": "2021"
