@@ -1,5 +1,5 @@
 {
-    "last_updated": "2026-01-02T01:27:58.188545Z",
+    "last_updated": "2026-01-03T01:23:33.149026Z",
     "author": {
         "name": "Fan Wu",
         "affiliations": "Alibaba Cainiao Network",
@@ -55,6 +55,10 @@
         {
             "year": 2025,
             "citations": 112
+        },
+        {
+            "year": 2026,
+            "citations": 4
         }
     ],
     "publications": [
