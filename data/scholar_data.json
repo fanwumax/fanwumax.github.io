@@ -1,12 +1,12 @@
 {
-    "last_updated": "2026-02-19T02:00:04.783189Z",
+    "last_updated": "2026-02-20T01:55:51.048163Z",
     "author": {
         "name": "Fan Wu",
         "affiliations": "Alibaba Cainiao Network",
         "email": "Verified email at cainiao.com",
         "cited_by": {
             "citations": {
-                "all": 617,
+                "all": 619,
                 "since_2019": null
             },
             "h_index": {
@@ -54,11 +54,11 @@
         },
         {
             "year": 2025,
-            "citations": 120
+            "citations": 121
         },
         {
             "year": 2026,
-            "citations": 10
+            "citations": 11
         }
     ],
     "publications": [
@@ -69,7 +69,7 @@
             "authors": "Z Xiao, Y Wang, K Fu, F Wu",
             "publication": "ISPRS International Journal of Geo-Information 6 (2), 57, 2017",
             "cited_by": {
-                "value": 237,
+                "value": 238,
                 "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=15332096482201017594"
             },
             "year": "2017"
@@ -189,7 +189,7 @@
             "authors": "H Wen, Y Lin, Y Hu, F Wu, M Xia, X Zhang, L Wu, H Hu, H Wan",
             "publication": "IEEE Transactions on Intelligent Transportation Systems 24 (12), 13787-13800, 2023",
             "cited_by": {
-                "value": 7,
+                "value": 8,
                 "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=18039432900574767716"
             },
             "year": "2023"
