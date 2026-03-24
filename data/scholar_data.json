@@ -1,12 +1,12 @@
 {
-    "last_updated": "2026-03-23T02:04:20.620023Z",
+    "last_updated": "2026-03-24T01:55:39.242595Z",
     "author": {
         "name": "Fan Wu",
         "affiliations": "Alibaba Cainiao Network",
         "email": "Verified email at cainiao.com",
         "cited_by": {
             "citations": {
-                "all": 626,
+                "all": 627,
                 "since_2019": null
             },
             "h_index": {
@@ -30,7 +30,7 @@
         },
         {
             "year": 2019,
-            "citations": 40
+            "citations": 41
         },
         {
             "year": 2020,
@@ -81,7 +81,7 @@
             "authors": "F Wu, K Fu, Y Wang, Z Xiao, X Fu",
             "publication": "Algorithms 10 (2), 37, 2017",
             "cited_by": {
-                "value": 84,
+                "value": 85,
                 "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=7182869669317380944"
             },
             "year": "2017"
