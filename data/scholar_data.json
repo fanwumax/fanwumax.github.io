@@ -1,12 +1,12 @@
 {
-    "last_updated": "2026-04-14T02:25:08.016381Z",
+    "last_updated": "2026-04-15T02:23:09.212222Z",
     "author": {
         "name": "Fan Wu",
         "affiliations": "Alibaba Cainiao Network",
         "email": "Verified email at cainiao.com",
         "cited_by": {
             "citations": {
-                "all": 630,
+                "all": 633,
                 "since_2019": null
             },
             "h_index": {
@@ -30,7 +30,7 @@
         },
         {
             "year": 2019,
-            "citations": 40
+            "citations": 41
         },
         {
             "year": 2020,
@@ -58,7 +58,7 @@
         },
         {
             "year": 2026,
-            "citations": 22
+            "citations": 24
         }
     ],
     "publications": [
@@ -81,7 +81,7 @@
             "authors": "F Wu, K Fu, Y Wang, Z Xiao, X Fu",
             "publication": "Algorithms 10 (2), 37, 2017",
             "cited_by": {
-                "value": 84,
+                "value": 85,
                 "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=7182869669317380944"
             },
             "year": "2017"
@@ -153,7 +153,7 @@
             "authors": "T Cai, H Wan, F Wu, H Wen, S Guo, L Wu, H Hu, Y Lin",
             "publication": "2023 IEEE 39th International Conference on Data Engineering (ICDE), 3296-3308, 2023",
             "cited_by": {
-                "value": 15,
+                "value": 16,
                 "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=8894976767045999875"
             },
             "year": "2023"
@@ -165,7 +165,7 @@
             "authors": "Y Qiang, H Wen, L Wu, X Mao, F Wu, H Wan, H Hu",
             "publication": "2023 IEEE 39th International Conference on Data Engineering (ICDE), 3106-3112, 2023",
             "cited_by": {
-                "value": 14,
+                "value": 15,
                 "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=3392569264024721955"
             },
             "year": "2023"
