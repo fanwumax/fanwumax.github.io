@@ -1,12 +1,12 @@
 {
-    "last_updated": "2026-08-11T01:25:44.140003Z",
+    "last_updated": "2026-08-12T01:43:14.574350Z",
     "author": {
         "name": "Fan Wu",
         "affiliations": "Alibaba Cainiao Network",
         "email": "Verified email at cainiao.com",
         "cited_by": {
             "citations": {
-                "all": 657,
+                "all": 658,
                 "since_2019": null
             },
             "h_index": {
@@ -38,7 +38,7 @@
         },
         {
             "year": 2021,
-            "citations": 44
+            "citations": 45
         },
         {
             "year": 2022,
@@ -213,7 +213,7 @@
             "authors": "M Yue, T Sun, F Wu, L Wu, Y Xu, C Shahabi",
             "publication": "Joint European Conference on Machine Learning and Knowledge Discovery in …, 2020",
             "cited_by": {
-                "value": 1,
+                "value": 2,
                 "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=13089832198264501789"
             },
             "year": "2020"
