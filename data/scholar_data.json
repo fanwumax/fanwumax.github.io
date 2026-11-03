@@ -1,5 +1,5 @@
 {
-    "last_updated": "2026-11-02T04:23:16.109277Z",
+    "last_updated": "2026-11-03T05:19:47.873358Z",
     "author": {
         "name": "Fan Wu",
         "affiliations": "Alibaba Cainiao Network",
@@ -26,7 +26,7 @@
         },
         {
             "year": 2018,
-            "citations": 32
+            "citations": 31
         },
         {
             "year": 2019,
@@ -58,7 +58,7 @@
         },
         {
             "year": 2026,
-            "citations": 79
+            "citations": 80
         }
     ],
     "publications": [
@@ -81,7 +81,7 @@
             "authors": "F Wu, L Wu",
             "publication": "Proceedings of the AAAI conference on artificial intelligence 33 (01), 774-781, 2019",
             "cited_by": {
-                "value": 91,
+                "value": 92,
                 "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=10567519635662410710"
             },
             "year": "2019"
@@ -93,7 +93,7 @@
             "authors": "F Wu, K Fu, Y Wang, Z Xiao, X Fu",
             "publication": "Algorithms 10 (2), 37, 2017",
             "cited_by": {
-                "value": 85,
+                "value": 84,
                 "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=7182869669317380944"
             },
             "year": "2017"
